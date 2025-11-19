@@ -473,21 +473,22 @@ section .boxs{
 .name{
     display: flex;
     justify-content: space-around;
-    background: var(--secondary-color);
+    align-items: center;
 }
 .name p{
     font-size: .9rem;
     color:var(--bg-color);
+    background: var(--secondary-color);
     font-weight: 550;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: .4rem;
     border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
 }
  .swiper-slide.swiper-slideP{
     width: 100px;

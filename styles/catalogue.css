@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --secondary-color:#112e42;
+    --text-color:#fff;
+    --bg-color:#ededed;
+    --main-color:#00abf0;
+    --font-family:'Roboto';
+}
+.darkmode{
+    --secondary-color: #0A1A28;    
+    --text-color: #E6F7FF;       
+    --bg-color: #0F2433;          
+    --main-color: #00abf0;        
+    --kitoko-color: #1E90FF;      
+    --font-family: 'Roboto';
+}
+body{
+    overflow-x:hidden;
+    height: 100%;
+    width: 100%;
+}
+ 
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+    outline: none;
+    box-sizing: border-box;
+    color:var(--secondary-color);
+    font-family: var(--font-family);
+}
+.catalogue{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--bg-color);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.catalogue .principalebox{
+    margin-top: 4rem;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    place-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap:2rem;
+    padding: 3rem 1rem;
+}
+.catalogue .principalebox .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+}
+.catalogue .principalebox .texts h1{
+    font-size: clamp(2rem, 5vw, 4rem);
+    letter-spacing: 2px;
+    color: var(--bg-color);
+}
+.catalogue .principalebox .texts p{
+    font-size: clamp(1.5rem, 2.2vw,2.5rem);
+    color: var(--bg-color);
+    width: 90%;
+}
+.cardboxs{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    gap: 1rem;
+    place-items: center;
+    padding: 1rem 0;
+    width: 100%;
+}
+.card{
+    background: var(--bg-color);
+    margin: 0 1rem;
+    padding: 2rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+.card:hover{
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+.card .boximg img{
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 16/9;
+    
+}
+.h2catg{
+    font-size: 2rem;
+    color: var(--secondary-color);
+    text-align: center;
+}
+.boxtext{
+    display: flex;
+    
+    flex-direction: column;
+    gap: 1rem;
+}
+
+footer{
+    width: 100%;
+    margin-top: 2rem;
+}
+.footer-top{
+    background: var(--secondary-color);
+    color: var(--bg-color);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+
+}
+.footer-top h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.footer-top-box1, .footer-top-box2, .footer-top-box3{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+.footer-top-box1 i, .footer-top-box2 i, .footer-top-box3 i{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+.footer-top-box1 h3, .footer-top-box2 h3, .footer-top-box3 h3{
+    margin-top: 0.5rem;
+    color: var(--bg-color);
+}
+.logoTxt{
+    color: var(--bg-color);
+}
+.footer-top-box3 p{
+    color: var(--bg-color);
+}
+.email-obfuscated{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+color: var(--bg-color);
+}
+.email-obfuscated a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.email-obfuscated span{
+    color: var(--bg-color);
+}
+.footer-bottom p{
+    color: var(--bg-color);
+    padding: 1rem;
+    text-align: center;
+}
+.offres{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+.offres h2{
+    font-size: clamp(2rem, 2vw, 3rem);
+}
+.offres iframe{
+    width: 80%;
+}

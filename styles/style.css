@@ -473,10 +473,12 @@ section .boxs{
 .name{
     display: flex;
     justify-content: space-around;
+    background: var(--secondary-color);
 }
 .name p{
     font-size: .9rem;
-    background: var(--text-color);
+    color:var(--bg-color);
+    font-weight: 550;
     display: flex;
     justify-content: center;
     align-items: center;

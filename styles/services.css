@@ -14,9 +14,10 @@
     --kitoko-color: #1E90FF;     /* Accent, liens / boutons */
     --font-family: 'Roboto';
 }
-/* body{
+body{
     overflow-x:hidden;
-} */
+    width: 100%;
+}
 /*All elements*/
 *{
     padding: 0;

@@ -14,9 +14,10 @@
     --kitoko-color: #1E90FF;     /* Accent, liens / boutons */
     --font-family: 'Roboto';
 }
+/*Darkmode à venir*/
 body{
     overflow-x: hidden;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: var(--bg-color);
 }
@@ -273,6 +274,7 @@ i{
     align-items: center;
     flex-direction: column;
     gap: 2rem;
+    padding: 0 1rem;
 }
 .presentation{
     display: grid;
@@ -281,7 +283,11 @@ i{
     gap: 2rem;
     width: 100%;
     height: 100%;
-    padding:8rem 0 0 0 ;
+    padding:8rem 1rem 0 1rem;
+    background: --;
+}
+iframe{
+    width: 80%;
 }
 .presentation h3{
     font-family: var(--font-family);
@@ -348,7 +354,7 @@ section .boxs{
     justify-content: center;
     align-items: center;
     flex-direction:column;
-    padding:1rem 0;
+    padding: auto;
     gap: 2rem;
     text-align: center;
 }
@@ -360,7 +366,8 @@ section .boxs{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1rem;
-    padding:1rem;place-items: center;
+    padding:auto  ;
+ place-items: center;
 }
 
 .avantages,.partenariat,.Statut{
@@ -377,7 +384,7 @@ section .boxs{
     -o-border-radius: 10px;
     padding: 1rem;
     text-align: center;
-    width: 97%;
+    width: 100%;
 }
 .AvantagesLi{
     color: var(--secondary-color);

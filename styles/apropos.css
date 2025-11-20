@@ -91,7 +91,7 @@ body{
 }
 .surnous_bottom{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(clamp(300px, 350px, 100%), 1fr));
     gap: 2rem;
     place-items: center;
 }

@@ -3,7 +3,7 @@ window.addEventListener("load", ()=>{
     setTimeout(()=>{
         const preloader=document.querySelector(".preloader")
         preloader.classList.add('remove')
-    },500);
+    });
 
     const closedbtn=document.querySelector("#close")
     const rgba=document.querySelector(".rgbafornavphone")

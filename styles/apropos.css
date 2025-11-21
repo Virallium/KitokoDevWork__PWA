@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
     --secondary-color:#112e42;
-    --text-color:#fff;
+    --bg2-color:#fff;
     --bg-color:#ededed;
     --main-color:#00abf0;
-    --text-color:#1E90FF;
     --font-family:'Roboto';
 }
 .darkmode{
     --secondary-color: #0A1A28;   /* Plus sombre, idéal pour headers */
-    --text-color: #E6F7FF;       /* Blanc légèrement bleuté = lisibilité */
+    --bg2-color: #E6F7FF;       /* Blanc légèrement bleuté = lisibilité */
     --bg-color: #0F2433;         /* Background global sombre */
     --main-color: #00abf0;       /* On garde ton bleu vif */
-  /* Accent, liens / boutons */
+    --kitoko-color: #1E90FF;     /* Accent, liens / boutons */
     --font-family: 'Roboto';
 }
 body{
@@ -93,7 +92,7 @@ body{
 }
 .surnous_bottom{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(300px, 350px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(clamp(150px, 350px, 100%), 1fr));
     gap: 2rem;
     place-items: center;
     width: 100%;

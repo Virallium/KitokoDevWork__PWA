@@ -1,11 +1,11 @@
 @media(max-width:1080px) {
-    :root{
+:root{
     --secondary-color:#112e42;
-    --text-color:#fff;
+    --bg2-color:#fff;
     --bg-color:#ededed;
     --main-color:#00abf0;
     --font-family:'Roboto';
-    }
+}
     nav ul{
         flex-direction: column;
         position: fixed;
@@ -137,8 +137,10 @@
         background: var(--secondary-color);
     }
     
-    iframe{
-        width: 90%;
+    iframe {
+    width: min(100%, 70vw);
+    max-width: 560px; /* ou adaptatif */
+    height: 100%;
     }
     section .boxs{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -183,6 +185,21 @@
     }
     .catalogue .principalebox{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+@media(max-width:369px){
+    #iframeIndex{
+        display: none;
+    }
+    #videoIntro{
+        display: block;
+    }
+}
+@media(max-width:347px){
+    .presentation{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 

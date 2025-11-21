@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
     --secondary-color:#112e42;
-    --text-color:#fff;
+    --bg2-color:#fff;
     --bg-color:#ededed;
     --main-color:#00abf0;
     --font-family:'Roboto';
 }
 .darkmode{
-    --secondary-color: #0A1A28;    
-    --text-color: #E6F7FF;       
-    --bg-color: #0F2433;          
-    --main-color: #00abf0;        
-    --kitoko-color: #1E90FF;      
+    --secondary-color: #0A1A28;   /* Plus sombre, idéal pour headers */
+    --bg2-color: #E6F7FF;       /* Blanc légèrement bleuté = lisibilité */
+    --bg-color: #0F2433;         /* Background global sombre */
+    --main-color: #00abf0;       /* On garde ton bleu vif */
+    --kitoko-color: #1E90FF;     /* Accent, liens / boutons */
     --font-family: 'Roboto';
 }
 body{
@@ -46,7 +46,7 @@ body{
     height: 100%;
     background: var(--main-color);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 350px, 400px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(clamp(150px, 350px, 400px), 1fr));
     place-items: center;
     text-align: center;
     flex-direction: column;
@@ -74,16 +74,17 @@ body{
 }
 .cardboxs{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(clamp(150px, 350px, 100%),1fr));
     gap: 1rem;
     place-items: center;
-    padding: 1rem ;
+    padding: 2rem;
+    width: 100%;
 }
 .card{
     width: 100%;
     background: var(--bg-color);
     margin: 0 1rem;
-    padding: 2rem;
+    padding: 1rem 2rem;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -120,6 +121,23 @@ body{
     flex-direction: column;
     gap: 1rem;
 }
+.btnCommander{
+    color: var(--secondary-color);
+    background: var(--bg2-color);
+    padding: .5rem;
+    width: fit-content;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+    font-weight: 550;
+}
+.btnCommander:hover{
+    background: var(--secondary-color);
+    color: var(--bg-color);
+}
+
 
 footer{
     width: 100%;
@@ -196,6 +214,4 @@ color: var(--bg-color);
 .offres h2{
     font-size: clamp(2rem, 2vw, 3rem);
 }
-.offres iframe{
-    width: 80%;
-}
+ 

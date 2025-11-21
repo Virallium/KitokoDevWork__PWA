@@ -18,7 +18,7 @@
 body{
     overflow-x:hidden;
     width: 100vw;
-    background: red;
+    height: 100vh;
 }
 /*All elements*/
 *{

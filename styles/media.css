@@ -137,11 +137,7 @@
         background: var(--secondary-color);
     }
     
-    iframe {
-    width: min(100%, 70vw);
-    max-width: 560px; /* ou adaptatif */
-    height: 100%;
-    }
+   
     section .boxs{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }

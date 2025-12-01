@@ -55,6 +55,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>kitokoDevWork||Apropos</title>
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/media.css">
@@ -165,9 +166,9 @@
                         <h2>Rejoignez-nous dans notre aventure digitale</h2>
                         <p>Nous sommes impatients de collaborer avec vous pour créer un site web qui propulsera votre entreprise vers de nouveaux sommets. Contactez-nous dès aujourd’hui pour discuter de vos besoins en matière de conception web et découvrir comment Kitoko Dev Work peut vous aider à atteindre vos objectifs commerciaux.</p>
                 </div>
-                    <form action="https://formspree.io/f/xdkyopkw" method="POST" class="scrollAnimation notsee">
-                        <input type="text" placeholder="Nom" minlength="3" maxlength="30" required>
-                        <input type="email" name="mail" id="email" placeholder="Email" required>
+                    <form id="contactForm" method="POST" class="scrollAnimation notsee">
+                        <input type="text" name="nom"  placeholder="Nom" minlength="3" maxlength="30" required>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
                         <input type="tel" name="tel" id="phone" placeholder="Téléphone" required>
                         <textarea name="message" id="message" cols="30" rows="10"></textarea>
                         <button type="submit" class="envoyermsg">Envoyer</button>

@@ -2,7 +2,7 @@ export const data=[
     {
         iconentreprise:"https://cocoricoweb.com/wp-content/uploads/2018/04/carte-visite-logo-site-vitrine-04-16-258.jpg",
         nom:"Site vitrine",
-        prix:"$69",
+        prix:"$120",
         disponibilite:"disponible",
         description:"Pour présenter votre entreprise de manière professionnelle et percutante.",
         concerne:"pour PME, ASBL, Eglise, Agence, hôtel, institution, Autre",
@@ -11,8 +11,8 @@ export const data=[
     },
     {
         iconentreprise:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSewPm2yujAbsj7YEAkPDqi2B3h8H5CoTv8zw&s",
-        nom:"Site(inst)",
-        prix:"$120",
+        nom:"Site(institutionnel)",
+        prix:"$180",
         disponibilite:"disponible",
         description:"Une plateforme complète pour refléter vos valeurs et votre expertise.",
         concerne:"pour Entreprise, ONG, etc.",
@@ -21,7 +21,7 @@ export const data=[
     },
     {
         iconentreprise:"https://i.ytimg.com/vi/Wbc2db82jLQ/maxresdefault.jpg",
-        prix:"$180",
+        prix:"$250",
         nom:"Site(E-commerce)",
         disponibilite:"disponible",
         description:"Pour vendre vos produits/services 24h/24, avec une boutique simple à gérer.",

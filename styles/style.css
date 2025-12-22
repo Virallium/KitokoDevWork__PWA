@@ -349,7 +349,7 @@ section .boxs{
     gap:2rem;
     place-items:center;
     width:100%;
-    padding:2rem 0;
+    padding:2rem 1rem;
 }
 
 .boxs img{
@@ -379,6 +379,148 @@ section .boxs{
     -o-transform:rotate(3deg);
     box-shadow: 4px 3px 9px rgba(0,0,0,0.6);
 }
+.boxs .box{
+    background: var(--bg2-color);
+    padding: 2rem 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    position: relative;
+}
+.boxs .box span{
+    font-size:2rem;
+}
+.boxs .box #i{
+    color:var(--secondary-color);
+    font-size:2rem;
+     animation:Ianimation 3s ease-in-out infinite alternate;
+    -webkit-animation:Ianimation 3s ease-in-out infinite alternate;
+    -moz-animation:Ianimation 1s ease-in-out;
+    -ms-animation:Ianimation 1s ease-in-out;
+    -o-animation:Ianimation 1s ease-in-out;
+}
+@keyframes Ianimation {
+    from{
+        transform: translate(10px);
+        -webkit-transform: translate(10px);
+        -moz-transform: translate(10px);
+        -ms-transform: translate(10px);
+        -o-transform: translate(10px);
+    }
+to{
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+    }
+}
+.title{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.boxinfo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(18% at 100% 0);
+    cursor: pointer;
+    transition: clip-path .6s ;
+    -webkit-transition: clip-path .6s ;
+    -moz-transition: clip-path .6s ;
+    -ms-transition: clip-path .6s ;
+    -o-transition: clip-path .6s ;
+}
+.boxinfo p{
+    color: var(--bg-color);
+    font-size: 1.2rem;
+    padding: 1.2rem;
+}
+.boxinfo:hover{
+    clip-path: circle(141.6% at 100% 0);
+}
+.boxs .boxinfo i{
+    color: var(--secondary-color);
+    position: absolute;
+    right: 0;
+    top: 1rem;
+}
+.projets{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    padding: 2rem 1rem;
+    gap: 2rem;
+}
+.pj{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--main-color);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.pj p{
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+.pj h2{
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    text-wrap: wrap;
+}
+.pjbox{
+    background: var(--bg2-color);
+    padding: 2rem 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+    position: relative;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.pjbox h2{
+    font-size: clamp(1.5rem, 4vw, 1.5rem);
+}
+.hoverBox{
+    background: var(--main-color);
+    padding: .8rem 3rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    cursor: pointer;
+}
+.hoverBox:hover{
+    background: var(--secondary-color);
+}
+.hoverBox:hover a{
+    color: var(--main-color);
+}
+
 .pourquoiNous{
     background:var(--main-color);
     display:flex;

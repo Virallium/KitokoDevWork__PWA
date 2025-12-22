@@ -60,9 +60,7 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/media.css">
     <link rel="manifest" href="../manifest.json">
-    <script type="module" src="../js/data.js"></script>
-    <script type="module" src="../js/function.js"></script>
-    <script type="module" src="../js/style.js"></script>    
+    <script src="../js/style.js" defer></script>    
     <!--fontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="/photos/LogoKitokoDev.png" type="image/x-icon">
@@ -117,7 +115,8 @@
                     <h1>Notre Catalogue de Services</h1>
                     <p>Découvrez nos offres de création de sites web professionnels adaptés aux besoins des restaurants, PME et organisations à Kinshasa.</p>
                 </div>
-                <img src="../photos/e_commerce.png" alt="Icon E-commerce" width="250px" loading="lazy">
+                <img src="../photos/e_commerce.png" alt="Icon E-commerce"  loading="lazy">
+                <div class="boxmodel"></div>
             </div>
             <h2 class="h2catg scrollAnimation">Nos Kit</h2>
             <div class="cardboxs ">
@@ -132,7 +131,7 @@
                             <p>Délais de livraison : 3 à 5 jours</p>
                         </div>
                         <span class="scrollAnimation"> À partir de 69$</span>
-                        <a href="#" class=" btnCommander scrollAnimation">Commander</a>
+                        <a  class=" btnCommander scrollAnimation">Commander</a>
                     </div>
                 </div>
                 <div class="card scrollAnimation">
@@ -146,7 +145,7 @@
                         <div class="duree scrollAnimation">
                             <p>Délais de livraison : 1 à 2 semaines</p>
                         </div>
-                        <a href="#contactId" class=" btnCommander scrollAnimation">Contacter</a>
+                        <a  class=" btnCommander scrollAnimation">Contacter</a>
                     </div>
                 </div>
                 <div class="card scrollAnimation">
@@ -160,16 +159,33 @@
                         <div class="duree scrollAnimation">
                             <p class="scrollAnimation">Délais de livraison : 2 à 3 semaines</p>
                         </div>
-                        <a href="#contactId" class=" btnCommander scrollAnimation">Contacter</a>
+                        <a class=" btnCommander scrollAnimation">Contacter</a>
   
                     </div>
                 </div>
             </div>
+            <dialog>
+              <i class="fa-solid fa-x" id="closecmdBtn"></i>
+              <h2>Informations</h2>
+              <span id="userIcon">👤</span>
+              <form action="">
+                <label for="nom">Nom</label>
+                <input type="text" placeholder="Entrez votre nom" minlength="3" maxlength="25" id="nom" required>
+                <label for="postnom">Postnom</label>
+                <input type="text" placeholder="Entrez votre postnom" minlength="3" maxlength="25" id="postnom" required>
+                <label for="phone">Numéro de téléphone</label>
+                <input type="tel" id="phone" minlength="13" maxlength="13" pattern="^/+243[0-9]{9}$"required>
+                <label for="msg">Message</label>
+                <textarea name="msg" id="msg" cols="40" rows="10" placeholder="Nous écrire"></textarea>
+                <button>Envoyer</button>
+              </form>
+            </dialog>
             <div class="offres">
               <h2>Nos offres</h2>
-              <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1359435115844121%2F&show_text=false&width=380&t=0" width="380" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+              <div class="video">
+                <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1359435115844121%2F&show_text=false&width=380&t=0" width="380" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+              </div>
             </div>
-
         </div>
        <footer class="footer">
       <div class="section__container footer__container">

@@ -24,6 +24,25 @@ window.addEventListener("load", ()=>{
         ul.classList.add("close")
         rgba.classList.remove("rgbafornavphoneVisible")
     });
+    const btnCommander=document.querySelectorAll(".btnCommander")
+    btnCommander.forEach(btn => {
+        const dialog=document.querySelector("dialog")
+        const closeDialog=document.querySelector("#closecmdBtn")
+        btn.addEventListener("click", ()=>{
+            dialog.showModal()
+            dialog.classList.add("dialogOpen")
+            dialog.classList.remove("removeDialog")
+        })
+        closeDialog.addEventListener("click", ()=>{
+            dialog.close()
+            dialog.classList.add("removeDialog")
+            dialog.classList.remove("dialogopen")
+            
+        })
+    });
+    
+
+    
 });
 
 

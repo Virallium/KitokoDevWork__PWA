@@ -457,7 +457,7 @@ to{
 }
 .projets{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     padding: 2rem 1rem;
     gap: 2rem;
 }
@@ -468,26 +468,33 @@ to{
   align-items: center;
   flex-direction: column;
   text-align: center;
-  gap: 1rem;
-  padding: 1rem;
-  background: var(--main-color);
+  gap: .7rem;
+  padding: min(1rem, 5%);
+  background: var(--bg2-color);
+  height: 100%;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-.pj p{
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
-}
 .pj h2{
     font-size: clamp(1rem, 4vw, 1.5rem);
+}
+.pj p{
+    font-size: clamp(.9rem, 2.5vw, 1.2rem);
     text-wrap: wrap;
+    width: 100%;
+}
+.pjbox h2{
+    font-size: clamp(1.5rem, 4vw, 1.5rem);
 }
 .pjbox{
     background: var(--bg2-color);
-    padding: 2rem 3rem;
+    box-shadow: 3px 3px 9px rgba(0,0,0,0.2);
+    padding: 2rem min(3rem, 5%);
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

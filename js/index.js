@@ -64,7 +64,9 @@ function showAlertError(title,text) {
 const AfficherService = (services) => {
     productContainer.innerHTML = ""; // <-- Vide le container avant d’afficher
     if (services.length === 0) {
-        productContainer.innerHTML = "<p>Aucun service trouvé 😢</p>";
+        productContainer.innerHTML = `<p>Aucun service trouvé 😢</p>
+          <p class="cart-shop">🛒</p>
+        `;
         return;
     }
     else{

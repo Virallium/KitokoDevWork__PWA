@@ -154,6 +154,14 @@
     width: 80%;
     }
 }
+@media(max-width:745px){
+    .boxmodel{
+        top: 50%;
+        left: 0;
+        background: var(--secondary-color);
+        clip-path: circle(50% at center center);
+}
+}
 @media(max-width:480px){
     .h1services{
         font-size: clamp(1.5rem,4vw,2.5rem);
@@ -189,6 +197,12 @@
     }
     #videoIntro{
         display: block;
+    }
+    .catalogue .principalebox{
+        height: 100%;
+    }
+    dialog form input, textarea{
+        width: 99%;
     }
 }
 @media(max-width:347px){

@@ -39,7 +39,7 @@ main {
     outline: none;
     box-sizing: border-box;
     color:var(--secondary-color);
-    font-family: Dancing Script, cursive;
+    font-family: cursive;
 }
 header{
     width: 100%;

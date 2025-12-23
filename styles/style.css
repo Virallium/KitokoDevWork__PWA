@@ -38,7 +38,7 @@ main {
     outline: none;
     box-sizing: border-box;
     color:var(--secondary-color);
-    font-family: cursive, sans-serif, 'Avenir', 'Helvetica Neue', Helvetica, Arial;
+    font-family: 'Avenir', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 header{
     width: 100%;

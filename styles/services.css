@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=cursive&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=popins&display=swap');
 :root{
     --secondary-color:#112e42;
     --bg2-color:#fff;
     --bg-color:#ededed;
     --main-color:#00abf0;
-    --font-family:'cursive';
+    --font-family:'Poppins';
 }
 .darkmode{
     --secondary-color: #0A1A28;   /* Plus sombre, idéal pour headers */
@@ -12,7 +12,7 @@
     --bg-color: #0F2433;         /* Background global sombre */
     --main-color: #00abf0;       /* On garde ton bleu vif */
     --kitoko-color: #1E90FF;     /* Accent, liens / boutons */
-    --font-family: 'cursive';
+    --font-family: 'Poppins', sans-serif;
 }
 body{
     overflow-x:hidden;
@@ -28,7 +28,7 @@ body{
     outline: none;
     box-sizing: border-box;
     color:var(--secondary-color);
-    font-family:  cursive;
+    font-family:  'popins';
 }
 header{
     z-index: 999;

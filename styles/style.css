@@ -5,7 +5,7 @@
     --bg2-color:#fff;
     --bg-color:#ededed;
     --main-color:#00abf0;
-    --font-family:Dancing Script, cursive;
+    --font-family: cursive;
 }
 .darkmode{
     --secondary-color: #0A1A28;   /* Plus sombre, idéal pour headers */
@@ -13,7 +13,7 @@
     --bg-color: #0F2433;         /* Background global sombre */
     --main-color: #00abf0;       /* On garde ton bleu vif */
     --kitoko-color: #1E90FF;     /* Accent, liens / boutons */
-    --font-family: Dancing Script, cursive;
+    --font-family:  cursive;
 }
 /*Darkmode à venir*/
 body {

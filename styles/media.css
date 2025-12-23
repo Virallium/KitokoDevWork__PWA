@@ -160,7 +160,7 @@
         left: 0;
         background: var(--secondary-color);
         clip-path: circle(50% at center center);
-}
+    }
 }
 @media(max-width:480px){
     .h1services{

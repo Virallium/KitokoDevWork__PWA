@@ -37,7 +37,6 @@ window.addEventListener("load", ()=>{
             dialog.close()
             dialog.classList.add("removeDialog")
             dialog.classList.remove("dialogopen")
-            
         })
     });
     

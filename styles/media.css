@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=cursive&display=swap');
 @media(max-width:1080px) {
 :root{
     --secondary-color:#112e42;
     --bg2-color:#fff;
     --bg-color:#ededed;
     --main-color:#00abf0;
-    --font-family:'Roboto';
+    --font-family:'cursive';
 }
     nav ul{
         flex-direction: column;

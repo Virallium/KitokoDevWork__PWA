@@ -39,7 +39,7 @@ main {
     outline: none;
     box-sizing: border-box;
     color:var(--secondary-color);
-    font-family: cursive;
+    font-family: cursive, sans-serif, 'Avenir', 'Helvetica Neue', Helvetica, Arial;
 }
 header{
     width: 100%;

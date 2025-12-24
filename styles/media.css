@@ -154,6 +154,7 @@
     .footer__content{
     width: 80%;
     }
+    
 }
 @media(max-width:745px){
     .boxmodel{
@@ -161,6 +162,9 @@
         left: 0;
         background: var(--secondary-color);
         clip-path: circle(50% at center center);
+    }
+    .presentationBox .text h3,h2{
+        font-size: 17px
     }
 }
 @media(max-width:480px){

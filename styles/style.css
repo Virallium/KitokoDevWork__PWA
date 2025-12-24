@@ -290,7 +290,7 @@ i{
     font-family: 'poppins', sans-serif;
 }
 .presentationBox .text h3,h2{
-    font-size: clamp(1rem, 5vw, 3.5rem);
+    font-size: 25px;
     color: var(--secondary-color);
     text-align: left;
     font-family: 'poppins', sans-serif;

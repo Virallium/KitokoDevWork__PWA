@@ -283,6 +283,20 @@ i{
     flex-direction: column;
     gap: min(2rem, 9%);
 }
+.presentationBox .presentation h3{
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--secondary-color);
+    text-align: center;
+    font-family: 'poppins', sans-serif;
+}
+.presentationBox .text h3,h2{
+    font-size: clamp(1rem, 5vw, 3.5rem);
+    color: var(--secondary-color);
+    text-align: left;
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
+}
+
 #videoIntro{
     display: none;
     color: var(--secondary-color);

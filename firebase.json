@@ -6,7 +6,10 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [ { "source": "**", "destination": "/index.html" } ],
+    "rewrites": [ { "source": "kitokodevwork.com", "destination": "/index.html" },
+                  { "source": "/catalogue", "destination": "/html/catalogue.html" },
+                  { "source": "/apropos", "destination": "/html/apropos.html" },
+                  { "source": "/services", "destination": "/html/services.html" }],
     "redirects": [ { "source": "/", "destination": "kitokodevwork.com", "type": 301 } ]
   }
 }

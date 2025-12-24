@@ -214,6 +214,10 @@ form button:hover{
     background-color: var(--secondary-color);
     color: var(--main-color);
 }
+.submit_btn_clicked{
+    background-color: var(--secondary-color);
+    color: gray;
+}
 .dialog{
     padding: 2rem;
     border-radius: 10px;

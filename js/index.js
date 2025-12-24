@@ -5,8 +5,7 @@ const productContainer = document.querySelector(".container");
 const input = document.querySelector("input");
 
 //Fonction pour Soumettre le formulaire de contact
-async function submitForm(event) {
-  event.preventDefault(); // Empêche le rechargement de la page
+async function submitForm() {
   const form = document.getElementById("contactForm");
   const formData = new FormData(form);
   const entries = Object.fromEntries(formData.entries());
@@ -40,7 +39,14 @@ async function submitForm(event) {
 if (window.location.pathname.endsWith("apropos.html") ) {
   const form = document.getElementById("contactForm");
   console.log(form)
-  form.addEventListener("submit", event => submitForm(event));
+  form.addEventListener("submit", event => {
+    event.preventDefault();
+    event.target.classList.add("submit_btn_clicked");
+    document.querySelector(".envoyermsg").innerText = "Envoi en cours...";
+    submitForm();
+    document.querySelector(".envoyermsg").innerText = "Envoyer";
+    event.target.classList.remove("submit_btn_clicked");
+  });
 }
 //Fonction qui crée les boites de dialogues de confirmation
 function showAlertInformation(title,text) {
@@ -60,7 +66,7 @@ function showAlertError(title,text) {
     });
 }
 
-// Fonction pour afficher les services
+/*/ Fonction pour afficher les services
 const AfficherService = (services) => {
     productContainer.innerHTML = ""; // <-- Vide le container avant d’afficher
     if (services.length === 0) {
@@ -91,4 +97,4 @@ input.addEventListener("keyup", (e) => {
   );
   AfficherService(filtre);
 });
-
+*/

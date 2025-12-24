@@ -4,7 +4,7 @@
     --bg2-color:#fff;
     --bg-color:#ededed;
     --main-color:#00abf0;
-    --font-family: 'popins';
+    --font-family: 'cursive';
 }
 .darkmode{
     --secondary-color: #0A1A28;   /* Plus sombre, idéal pour headers */
@@ -292,7 +292,7 @@ i{
 .presentationBox .text h3,h2{
     font-size: 25px;
     color: var(--secondary-color);
-    text-align: left;
+    text-align: center;
     font-family: 'poppins', sans-serif;
     font-weight: 600;
 }

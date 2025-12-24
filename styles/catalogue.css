@@ -154,8 +154,7 @@ body{
 dialog {
     width: 600px;
     max-width: 90%;
-    height: 100%;
-    padding: 0 26px;
+    padding: 1rem 26px;
     border: none;
     border-radius: 10px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -176,6 +175,7 @@ dialog {
     -o-transition:transform 0.5s;
     margin:auto auto;
     text-align:center;
+    display: none;
 }
 dialog h2{
     margin-bottom: .3rem;

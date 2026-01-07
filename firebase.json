@@ -6,7 +6,7 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [ { "source": "/", "destination": "/index.html" },
+    "rewrites": [ 
                   { "source": "/catalogue", "destination": "/html/catalogue.html" },
                   { "source": "/apropos", "destination": "/html/apropos.html" },
                   { "source": "/services", "destination": "/html/services.html" },

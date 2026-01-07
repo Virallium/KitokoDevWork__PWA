@@ -6,7 +6,7 @@
       "**/.*",
       "**/node_modules/**"
     ],
-    "rewrites": [ { "source": "kitokodevwork.com", "destination": "/index.html" },
+    "rewrites": [ { "source": "/acceuil", "destination": "/index.html" },
                   { "source": "/catalogue", "destination": "/html/catalogue.html" },
                   { "source": "/apropos", "destination": "/html/apropos.html" },
                   { "source": "/services", "destination": "/html/services.html" },

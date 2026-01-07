@@ -5,12 +5,6 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [ { "source": "kitokodevwork.com", "destination": "/index.html" },
-                  { "source": "/catalogue", "destination": "/html/catalogue.html" },
-                  { "source": "/apropos", "destination": "/html/apropos.html" },
-                  { "source": "/services", "destination": "/html/services.html" },
-                  { "source": "/portfolioMiradi", "destination": "/html/portfolio.html" },
-                  { "source": "/portfolioEustache", "destination": "/html/portfolioEustache.html" }]
-  }
+    ]
+}
 }

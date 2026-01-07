@@ -10,17 +10,17 @@
     {
       "src": "KitokoDevWork_logo.ico",
       "sizes": "192x192",
-      "type": "image/webp"
+      "type": "image/ico"
     },
     {
       "src": "KitokoDevWork_logo.ico",
       "sizes": "512x512",
-      "type": "image/webp"
+      "type": "image/ico"
     },
     {
       "src": "KitokoDevWork_logo.ico",
       "sizes": "1080x1080",
-      "type": "image/webp"
+      "type": "image/ico"
     }
   ]
 }

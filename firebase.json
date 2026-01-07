@@ -5,12 +5,5 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [ 
-                  { "source": "/catalogue", "destination": "/html/catalogue.html" },
-                  { "source": "/apropos", "destination": "/html/apropos.html" },
-                  { "source": "/services", "destination": "/html/services.html" },
-                  { "source": "/portfolioMiradi", "destination": "/html/portfolio.html" },
-                  { "source": "/portfolioEustache", "destination": "/html/portfolioEustache.html" }]
-  }
+    ]
 }

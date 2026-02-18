@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hors connexion – KitokoDevWork</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+      background:#112e42;color:#ededed;font-family:'Poppins',sans-serif;text-align:center;padding:2rem;
+    }
+    .icon{font-size:4rem;margin-bottom:1rem}
+    h1{font-size:1.6rem;margin-bottom:.5rem}
+    p{max-width:420px;line-height:1.6;color:#b0c4d8;margin-bottom:1.5rem}
+    a{
+      display:inline-block;padding:.75rem 2rem;background:#00abf0;color:#fff;
+      border-radius:6px;text-decoration:none;font-weight:600;transition:background .3s;
+    }
+    a:hover{background:#0090cc}
+  </style>
+</head>
+<body>
+  <div class="icon">📡</div>
+  <h1>Vous êtes hors connexion</h1>
+  <p>Vérifiez votre connexion Internet puis réessayez. Certaines pages déjà visitées peuvent rester accessibles.</p>
+  <a href="/" onclick="location.reload();return false;">Réessayer</a>
+</body>
+</html>

@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kitoko Dev Work conçoit des sites internet professionnels pour les restaurants à kinshasa. Attirez plus de clients grâce à un site rapide et optimisé ">
-    <meta name="Keywords" content="Kitoko Dev Work, agence informatique, sites web, professionnel, création digital, organisations">
+    <meta name="description" content="Portfolio de Miradi Mengi, développeur front-end et fondateur de KitokoDevWork. Découvrez ses réalisations en web design et UI/UX.">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Kitoko Dev Work- Site Web pour restaurants, organisations, PME à kinshasa">
-    <meta property="og:description" content="Des sites pros qui attirent plus de clients.">
+    <meta property="og:title" content="Portfolio Miradi Mengi | Web Designer & UI/UX – KitokoDevWork">
+    <meta property="og:description" content="Portfolio de Miradi Mengi, développeur front-end chez KitokoDevWork. Web design et UI/UX.">
     <meta property="og:image" content="https://scontent.fbzv3-2.fna.fbcdn.net/v/t39.30808-6/568037377_122136332258950605_6986438980156322194_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEHAPrzvNl1-1Cc2vYbkrJ4qLzZnjC5qJKovNmeMLmokvGGvyVbA6i8D1k1ZfHXrZ5yIIy5_MAO-amZrMJW5izg&_nc_ohc=n9r8ZaaeUngQ7kNvwHZBS0l&_nc_oc=AdmmzHf3AoglqWxHm4au4OMc_IvPrx6NS8-xYRp2zpPi8wVLHqwlrCCXqOKcqdk-TK7C_8WiHZV01EUKBauXq4Lv&_nc_zt=23&_nc_ht=scontent.fbzv3-2.fna&_nc_gid=x3oLFZsqj4qXmqWKllBvcA&oh=00_Afj9AtZpMXfPd47fIp744SnPBhajTf5rFBbzmDo3NtcTEg&oe=691E90FA">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Portfolio Miradi Mengi | Web Designer & UI/UX – KitokoDevWork">
+    <meta name="twitter:description" content="Portfolio de Miradi Mengi, développeur front-end chez KitokoDevWork. Web design et UI/UX.">
+    <meta name="twitter:image" content="https://kitokodevwork.com/photos/LogoAnimateKitokoDevWork.webp">
+    <meta property="og:url" content="https://kitokodevwork.com/html/portfolio">
+    <link rel="canonical" href="https://kitokodevwork.com/html/portfolio">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -56,75 +61,40 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>kitokoDevWork</title>
-    <link rel="stylesheet" href="../styles/portfolio.css">
-    <link rel="stylesheet" href="../styles/media.css">
-    <link rel="manifest" href="../manifest.json">
-    <script type="module" src="../js/style.js"></script>
-    <link rel="stylesheet" href="../photos/presprod5.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Portfolio Miradi – KitokoDevWork</title>
+    <link rel="stylesheet" href="/styles/portfolio.css">
+    <link rel="stylesheet" href="/styles/media.css">
+    <link rel="manifest" href="/manifest.json">
+    <script src="/js/components.js" defer></script>
+    <script src="/js/style.js" defer></script>
+    <script src="/js/serviceworker.js" defer></script>
     <!--fontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="/LogoKitokoDev.ico" type="image/ico">
-    <link rel="icon" href="/LogoKitokoDev.ico" type="image/ico" sizes="32x32">
-    <link rel="icon" href="/LogoKitokoDev.ico" type="image/ico" sizes="64x64">
-    <link rel="icon" href="/LogoKitokoDev.ico" type="image/ico" sizes="192x192">
+    <link rel="icon" href="/KitokoDevWork_logo.ico" type="image/x-icon">
 </head>
 <body>
     <main>
-            <div class="preloader">
-            <div id="logo-img-box1"></div>
-                <div class="logo-img-box2">
-                    <img src="../photos/LogoAnimateKitokoDevWork.webp" alt="Logo KitokoDev Work" width="200px" loading="lazy">
+            <div class="preloader" role="status" aria-label="Chargement">
+                <div id="logo-img-box1">
+                    <div class="logo-img-box2">
+                        <img src="/photos/LogoAnimateKitokoDevWork.webp" alt="Logo KitokoDevWork" width="200" height="200">
+                    </div>
                 </div>
             </div>
-            <div class="rgbafornavphone"></div>
-            <header class="header appear">
-                <div id="logo" style="font-size: 30px;"><img src="../photos/KitokoDevWork_logo.webp" alt="logo kitokoDevWork 2" width="200px" loading="lazy"></div>
-                <nav>
-                    <ul>
-                        <span class="btnclose">
-                            <i class="fa-solid fa-xmark" id="close"></i>
-                        </span>
-                        <li><a href="../index.html"  id="accueil">ACCUEIL</a></li>
-                        <li><a href="../html/apropos.html">APROPOS</a></li>
-                        <li><a href="../html/catalogue.html">CATALOGUE</a></li>
-                        <li><a href="../html/services.html">SERVICES</a></li>
-                        <a href="https://wa.me/243853514069" class="technicSupport">
-                            <span>
-                                <i class="fa-solid fa-headset"></i>
-                            </span>
-                            <p>Support</p>
-                        </a>
-                        <a href="" class="Comment" style="display: none;">
-                            <span>
-                                <i class="fa-solid fa-envelope"></i>
-                            </span>
-                            <p>Commentaire</p>
-                            <!--à modifier après-->
-                        </a>
-                        <a href="" class="Comment">
-                            
-                            <p><small>Version 1.01</small></p>
-                        </a>
-                    
-                    </ul>
-                    <div class="menu">
-                        <i class="fa-solid fa-bars" id="bar"></i>
-                    </div>
-                </nav>
-            </header>
+            <div id="shared-header"></div>
+            <div id="shared-breadcrumbs"></div>
             <section class="portfolio_pres">
                 <div class="text_pres_portf" data-aos="fade-right">
-                    <h3>Bonjour, je m'appelle <span>Miradi</span> et je suis</h3>
+                    <p class="portfolio-intro">Bonjour, je m'appelle <span>Miradi</span> et je suis</p>
                     <h1>Web Designer <span>UI & UX</span></h1>
                     <p>
                     Mon objectif est de permettre aux entrepreneurs et PME locales de se digitaliser efficacement, en leur offrant des solutions accessibles, professionnelles et adaptées au contexte congolais.
                     </p>
                     <div class="technologiesUtilisee">
-                        <img src="../photos/jsLogo.png" alt="logoJs" width="70px">
-                        <img src=" ../photos/cssLogo.png" alt="logoCss" width="70px">
-                        <img src="../photos/htmlLogo.png" alt="logoHtml" width="70px">
+                        <img src="../photos/jsLogo.png" alt="Logo JavaScript" width="70px">
+                        <img src="../photos/cssLogo.png" alt="Logo CSS" width="70px">
+                        <img src="../photos/htmlLogo.png" alt="Logo HTML" width="70px">
                     </div>
                 </div>
                 <div class="roundpres" data-aos="fade-left">
@@ -134,17 +104,17 @@
             </section>
             <section class="about">
                 <div class="left">
-                    <div class="round data-aos="zoom-in"">
-                        <img src="../photos/webdesign.png" alt="icon "width="70%">
+                    <div class="round" data-aos="zoom-in">
+                        <img src="../photos/webdesign.png" alt="Icône Web Design" width="70%">
                     </div>
                     <div class="round" data-aos="zoom-in">
-                        <img src="../photos/seo.png" alt="icon "width="70%">
+                        <img src="../photos/seo.png" alt="Icône SEO" width="70%">
                     </div>
                     <div class="round" data-aos="zoom-in">
-                        <img src="../photos/webapp.png" alt="icon "width="70%">
+                        <img src="../photos/webapp.png" alt="Icône Application Web" width="70%">
                     </div>
                     <div class="round" data-aos="zoom-in">
-                        <img src="../photos/testing.png" alt="icon "width="70%">
+                        <img src="../photos/testing.png" alt="Icône Tests" width="70%">
                     </div>
                     <div class="image-Me" data-aos="zoom-in-up">
                         <img src="../photos/miradi-pres-2.png" alt="Miradi" width="100%">
@@ -169,50 +139,14 @@
                     </div>
                 </div>
             </section>
-        <footer class="footer">
-            <div class="section__container footer__container">
-                <div class="footer__logo scrollAnimation" >
-                <img src="../photos/KitokoDevWork_logo.webp" alt="logo" width="200px" loading="lazy" />
-                </div>
-                <div class="footer__content">
-                <p class="scrollAnimation">
-                        Bienvenue chez KitokoDev Work, où créativité et expertise digitale se rencontrent. 
-                        Notre mission est de concevoir des sites web uniques et performants, en combinant design, 
-                        innovation et expérience utilisateur pour aider votre entreprise à se démarquer en ligne.
-                    </p>
-                <div>
-                    <ul class="footer__links">
-                    <li class="scrollAnimation">
-                        <span><i class="fa-solid fa-location-dot"></i></span>
-                        RDC,Kinshasa
-                    </li>
-                    <li class="scrollAnimation">
-                        <span><i class="fa-solid fa-envelope"></i></span>
-                        <a href="mailto:kitokodevwork@gmail.com">KitokoDevWork@gmail.com</a>
-                    </li>
-                    </ul>
-                    <div class="footer__socials scrollAnimation">
-                    <a href="https://www.facebook.com/kitokodevwork" target="_blank"><i class="fa-brands fa-facebook-f scrollAnimation"></i></a>
-                    <a href="https://wa.me/243853514069" target="_blank"><i class="fa-brands fa-whatsapp scrollAnimation"></i></a>
-                    <a href="https://www.instagram.com/kitokodevwork?igsh=NHhuMzlidDB5MThl" target="_blank"><i class="fa-brands fa-instagram scrollAnimation"></i></a>
-                    <a href="https://www.tiktok.com/@kitokodevwork?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fa-brands fa-tiktok scrollAnimation"></i></a>
-                    </div>
-                    <!-- <div class="confidentialiies">
-
-                    </div> -->
-                </div>
-                </div>
-            </div>
-            <div class="footer__bar">
-                Copyright © 2024 KitokoDevWork. All rights reserved.
-            </div>
-        </footer>
+        <div id="shared-footer"></div>
     </main>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <div id="offline-banner" class="offline-banner" hidden>
+      <p>Vous êtes hors ligne. Certaines fonctionnalités peuvent être limitées.</p>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script>
-        AOS.init();
+        document.addEventListener('DOMContentLoaded', () => AOS.init());
     </script>
-</body>
-</html>
 </body>
 </html>

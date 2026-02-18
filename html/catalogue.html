@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kitoko Dev Work conçoit des sites internet professionnels pour les restaurants à kinshasa. Attirez plus de clients grâce à un site rapide et optimisé ">
-    <meta name="Keywords" content="Kitoko Dev Work, agence informatique, sites web, professionnel, création digital, organisations">
+    <meta name="description" content="Nos offres de création de site web : Pack Starter dès 120$, Pack Pro dès 200$, Pack Premium sur devis. Hébergement inclus 1 an.">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Kitoko Dev Work- Site Web pour restaurants, organisations, PME à kinshasa">
-    <meta property="og:description" content="Des sites pros qui attirent plus de clients.">
+    <meta property="og:title" content="Catalogue & Tarifs | KitokoDevWork – Packs Site Web dès 120$">
+    <meta property="og:description" content="Nos offres de création de site web : Pack Starter dès 120$, Pack Pro dès 200$, Pack Premium sur devis.">
     <meta property="og:image" content="https://scontent.fbzv3-2.fna.fbcdn.net/v/t39.30808-6/568037377_122136332258950605_6986438980156322194_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeEHAPrzvNl1-1Cc2vYbkrJ4qLzZnjC5qJKovNmeMLmokvGGvyVbA6i8D1k1ZfHXrZ5yIIy5_MAO-amZrMJW5izg&_nc_ohc=n9r8ZaaeUngQ7kNvwHZBS0l&_nc_oc=AdmmzHf3AoglqWxHm4au4OMc_IvPrx6NS8-xYRp2zpPi8wVLHqwlrCCXqOKcqdk-TK7C_8WiHZV01EUKBauXq4Lv&_nc_zt=23&_nc_ht=scontent.fbzv3-2.fna&_nc_gid=x3oLFZsqj4qXmqWKllBvcA&oh=00_Afj9AtZpMXfPd47fIp744SnPBhajTf5rFBbzmDo3NtcTEg&oe=691E90FA">
     <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Catalogue & Tarifs | KitokoDevWork – Packs Site Web dès 120$">
+    <meta name="twitter:description" content="Nos offres de création de site web : Pack Starter dès 120$, Pack Pro dès 200$, Pack Premium sur devis.">
+    <meta name="twitter:image" content="https://kitokodevwork.com/photos/LogoAnimateKitokoDevWork.webp">
+    <meta property="og:url" content="https://kitokodevwork.com/html/catalogue">
+    <link rel="canonical" href="https://kitokodevwork.com/html/catalogue">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -54,64 +59,30 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>kitokoDevWork</title>
-    <link rel="stylesheet" href="../styles/catalogue.css">
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/media.css">
-    <link rel="manifest" href="../manifest.json">
-    <script src="../js/style.js" defer></script>    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Catalogue – KitokoDevWork</title>
+    <link rel="stylesheet" href="/styles/catalogue.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/media.css">
+    <link rel="manifest" href="/manifest.json">
+    <script src="/js/components.js" defer></script>
+    <script src="/js/style.js" defer></script>    
+    <script src="/js/serviceworker.js" defer></script>
     <!--fontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="/KitokoDevWork_logo.ico" type="image/ico">
-    <link rel="icon" href="/KitokoDevWork_logo.ico" type="image/ico" sizes="32x32">
-    <link rel="icon" href="/KitokoDevWork_logo.ico" type="image/ico" sizes="64x64">
-    <link rel="icon" href="/KitokoDevWork_logo.ico" type="image/ico" sizes="192x192">
+    <link rel="icon" href="/KitokoDevWork_logo.ico" type="image/x-icon">
 </head>
 <body>
     <main>
-        <div class="preloader">
-        <div id="logo-img-box1"></div>
-            <div class="logo-img-box2">
-                <img src="../photos/LogoAnimateKitokoDevWork.webp" alt="Logo KitokoDev Work" width="200px" loading="lazy">
+        <div class="preloader" role="status" aria-label="Chargement">
+            <div id="logo-img-box1">
+                <div class="logo-img-box2">
+                    <img src="/photos/LogoAnimateKitokoDevWork.webp" alt="Logo KitokoDevWork" width="200" height="200">
+                </div>
             </div>
         </div>
-        <div class="rgbafornavphone"></div>
-        <header class="header appear">
-            <div id="logo" style="font-size: 30px;"><img src="../photos/KitokoDevWork_logo.webp" alt="logo kitokoDevWork 2" width="200px" loading="lazy"></div>
-            <nav>
-                <ul>
-                    <span class="btnclose">
-                        <i class="fa-solid fa-xmark" id="close"></i>
-                    </span>
-                    <li><a href="../index.html"  id="accueil">ACCUEIL</a></li>
-                    <li><a href="../html/apropos.html">APROPOS</a></li>
-                    <li><a href="../html/catalogue.html"class="Active">CATALOGUE</a></li>
-                    <li><a href="../html/services.html">SERVICES</a></li>
-                    <a href="https://wa.me/243853514069" class="technicSupport">
-                        <span>
-                            <i class="fa-solid fa-headset"></i>
-                        </span>
-                        <p>Support</p>
-                    </a>
-                    <a href="" class="Comment" style="display: none;">
-                        <span>
-                            <i class="fa-solid fa-envelope"></i>
-                        </span>
-                        <p>Commentaire</p>
-                        <!--à modifier après-->
-                    </a>
-                    <a href="" class="Comment">
-                        
-                        <p><small>Version 1.01</small></p>
-                    </a>
-                   
-                </ul>
-                <div class="menu">
-                    <i class="fa-solid fa-bars" id="bar"></i>
-                </div>
-            </nav>
-        </header>
+        <div id="shared-header"></div>
+        <div id="shared-breadcrumbs"></div>
         <div class="catalogue">
             <div class="principalebox scrollAnimation">
                 <div class="texts">
@@ -125,7 +96,7 @@
             <div class="cardboxs ">
                 <div class="card scrollAnimation">
                     <div class="boximg scrollAnimation">
-                        <img src="../photos/KitokoDevWork_photo_web5.webp" alt="image catg 1" width="100%" loading="lazy">
+                        <img src="../photos/KitokoDevWork_photo_web5.webp" alt="Aperçu site web Pack Starter" width="100%" loading="lazy">
                     </div>
                     <div class="boxtext scrollAnimation">
                         <h2 class="scrollAnimation">Pack starter</h2>
@@ -139,7 +110,7 @@
                 </div>
                 <div class="card scrollAnimation">
                     <div class="boximg scrollAnimation">
-                        <img src="../photos/KitokoDevWork_photo_web3.webp" alt="image catg 2" width="100%" loading="lazy">
+                        <img src="../photos/KitokoDevWork_photo_web3.webp" alt="Aperçu site web Pack Professionnel" width="100%" loading="lazy">
                     </div>
                     <div class="boxtext scrollAnimation">
                         <h2 class="scrollAnimation">Pack professionnel</h2>
@@ -153,7 +124,7 @@
                 </div>
                 <div class="card scrollAnimation">
                     <div class="boximg scrollAnimation">
-                        <img src="../photos/KitokoDevWork_photo_web1.webp" alt="image catg 3" width="100%" loading="lazy">
+                        <img src="../photos/KitokoDevWork_photo_web1.webp" alt="Aperçu site web Pack Premium" width="100%" loading="lazy">
                     </div>
                     <div class="boxtext scrollAnimation">
                         <h2 class="scrollAnimation">Pack Premium</h2>
@@ -177,10 +148,10 @@
                 <label for="postnom">Postnom</label>
                 <input type="text" placeholder="Entrez votre postnom" minlength="3" maxlength="25" id="postnom" required>
                 <label for="phone">Numéro de téléphone</label>
-                <input type="tel" id="phone" minlength="13" maxlength="13" pattern="^/+243[0-9]{9}$"required>
+                <input type="tel" id="phone" minlength="10" maxlength="13" placeholder="+243..." required>
                 <label for="msg">Message</label>
                 <textarea name="msg" id="msg" cols="40" rows="10" placeholder="Nous écrire"></textarea>
-                <button>Envoyer</button>
+                <button type="submit">Envoyer</button>
               </form>
             </dialog>
             <div class="offres">
@@ -190,47 +161,26 @@
               </div>
             </div>
         </div>
-       <footer class="footer">
-      <div class="section__container footer__container">
-        <div class="footer__logo scrollAnimation" >
-          <img src="../photos/KitokoDevWork_logo.webp" alt="logo" width="200px" loading="lazy" />
-        </div>
-        <div class="footer__content">
-           <p class="scrollAnimation">
-                Bienvenue chez KitokoDev Work, où créativité et expertise digitale se rencontrent. 
-                Notre mission est de concevoir des sites web uniques et performants, en combinant design, 
-                innovation et expérience utilisateur pour aider votre entreprise à se démarquer en ligne.
-            </p>
-          <div>
-            <ul class="footer__links">
-              <li class="scrollAnimation">
-                <span><i class="fa-solid fa-location-dot"></i></span>
-                RDC,Kinshasa
-              </li>
-              <li class="scrollAnimation">
-                <span><i class="fa-solid fa-envelope"></i></span>
-                <a href="mailto:kitokodevwork@gmail.com">KitokoDevWork@gmail.com</a>
-              </li>
-            </ul>
-            <div class="footer__socials scrollAnimation" id="contactId">
-              <a href="https://www.facebook.com/kitokodevwork" target="_blank"><i class="fa-brands fa-facebook-f scrollAnimation"></i></a>
-              <a href="https://wa.me/243853514069" target="_blank"><i class="fa-brands fa-whatsapp scrollAnimation"></i></a>
-              <a href="https://www.instagram.com/kitokodevwork?igsh=NHhuMzlidDB5MThl" target="_blank"><i class="fa-brands fa-instagram scrollAnimation"></i></a>
-              <a href="https://www.tiktok.com/@kitokodevwork?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fa-brands fa-tiktok scrollAnimation"></i></a>
-            </div>
-            <!-- <div class="confidentialiies">
-
-              
-            </div> -->
-          </div>
-        </div>
-      </div>
-      <div class="footer__bar">
-        Copyright © 2024 KitokoDevWork. All rights reserved.
-      </div>
-    </footer>
+       <div id="shared-footer"></div>
     </main>
-</body>
-</html>
+    <div id="offline-banner" class="offline-banner" hidden>
+      <p>Vous êtes hors ligne. Certaines fonctionnalités peuvent être limitées.</p>
+    </div>
+    <script>
+      const dialogForm = document.querySelector('#dialog form');
+      if (dialogForm) {
+        dialogForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const nom = document.getElementById('nom').value;
+          const postnom = document.getElementById('postnom').value;
+          const phone = document.getElementById('phone').value;
+          const msg = document.getElementById('msg').value;
+          const text = `Bonjour, je suis ${nom} ${postnom}.%0ATel: ${phone}%0A${msg}`;
+          window.open(`https://wa.me/243853514069?text=${encodeURIComponent(text)}`, '_blank');
+          dialogForm.reset();
+          document.getElementById('dialog').close();
+        });
+      }
+    </script>
 </body>
 </html>

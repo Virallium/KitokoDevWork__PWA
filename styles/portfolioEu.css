@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=popins&display=swap');
+
 :root{
     --secondary-color:#112e42;
     --bg2-color:#fff;
     --bg-color:#ededed;
     --main-color:#00abf0;
-    --font-family: 'cursive';
+    --font-family: 'Poppins', sans-serif;
 }
 .darkmode{
     --secondary-color: #0A1A28;   /* Plus sombre, idéal pour headers */
@@ -12,7 +12,7 @@
     --bg-color: #0F2433;         /* Background global sombre */
     --main-color: #00abf0;       /* On garde ton bleu vif */
     --kitoko-color: #1E90FF;     /* Accent, liens / boutons */
-    --font-family:  'popins';
+    --font-family: 'Poppins', sans-serif;
 }
 /*Darkmode à venir*/
 body {
@@ -20,7 +20,6 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background: var(--bg-color);
-  overflow-x: hidden;
 }
 main {
   width: 100%;
@@ -38,38 +37,35 @@ main {
     outline: none;
     box-sizing: border-box;
     color:var(--secondary-color);
-    font-family: 'popins';
+    font-family: 'Poppins', sans-serif;
 }
 header{
     width: 100%;
     z-index: 999;
 }
 
-/*Loading ANimation*/
+/*Loading Animation*/
 .preloader{
     position: fixed;
-    width: 100vw;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background: var(--secondary-color);
-    opacity: 1;
-    z-index: 99999999999;
+    z-index: 9999;
+    transition: opacity .6s ease, visibility .6s ease;
+    animation: preloaderFallback .6s 5s forwards;
 }
-.remove{
-    pointer-events: none;
-    transition: 2s;
-    -webkit-transition: 2s;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s;
-    transform: translate(100%);
-    -webkit-transform: translate(100%);
-    -moz-transform: translate(100%);
-    -ms-transform: translate(100%);
-    -o-transform: translate(100%);
+.preloader.remove{
+    opacity: 0;
     visibility: hidden;
+    pointer-events: none;
+}
+@keyframes preloaderFallback{
+    to{ opacity:0; visibility:hidden; pointer-events:none; }
 }
 #logo-img-box1{
     width: 250px;
@@ -223,15 +219,15 @@ i{
     color: var(--bg-color);
 }
 
-.technicSupport p, .Comment p{
+.technicSupport p{
     display: none;
 }
-.technicSupport, .Comment{
+.technicSupport{
     position: relative;
     bottom: .5rem;
     margin-left: 2rem;
 }
-.technicSupport span i, .Comment span i{
+.technicSupport span i{
     background: var(--main-color);
     width: 100%;
     height: 100%;
@@ -247,7 +243,7 @@ i{
     -ms-transition: .5s ease;
     -o-transition: .5s ease;
 }
-.technicSupport span i:hover, .Comment span i:hover{
+.technicSupport span i:hover{
     background: var(--bg-color);
     color: var(--secondary-color);
 }
@@ -255,7 +251,7 @@ i{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(min(300px, 100%),1fr));
     place-items: center;
     padding-top: 8rem;
     background:url('/photos/bg-pres-eustache.png');
@@ -267,8 +263,8 @@ i{
 }
 .roundpres{
     position: relative;
-    width: 450px;
-    height: 450px;
+    width: min(450px, 80vw);
+    height: min(450px, 80vw);
     background: var(--secondary-color);
     clip-path: polygon(56% 0, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 35% 100%, 17% 78%, 17% 56%, 43% 37%);
     overflow: hidden;
@@ -285,15 +281,15 @@ i{
     flex-direction:column;
     padding:0 1rem;
 }
-.text_pres_portf h3{
+.text_pres_portf .portfolio-intro{
     font-size: clamp(1rem,8vw,1.3rem);
-    font-family:"Poppins";
+    font-family: 'Poppins', sans-serif;
     width: clamp(90%,min(350px,10%),350px);
 }
-.text_pres_portf h3 span{
+.text_pres_portf .portfolio-intro span{
     position:relative;
 }
-.text_pres_portf h3 span::before{
+.text_pres_portf .portfolio-intro span::before{
     content:'';
     position:absolute;
     bottom:0;
@@ -332,7 +328,7 @@ i{
 }
 .about{
     display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(350px,1fr));
+    grid-template-columns:repeat(auto-fit, minmax(min(350px, 100%),1fr));
     place-items:center;
 }
 .image-Me{
@@ -529,7 +525,7 @@ i{
 }
 footer{
     background: var(--secondary-color);
-    width: fit-content;
+    width: 100%;
 }
 .footer__bar{
     display: flex;
@@ -590,9 +586,26 @@ footer{
     color: var(--bg-color);
 }
 .footer__content{
-    width: 50%;
+    width: min(90%, 600px);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 768px) {
+    .text_pres_portf h1 span {
+        left: 0;
+    }
+    .left .round {
+        width: 60px;
+        height: 60px;
+    }
+    .portfolio_pres {
+        padding: 1rem;
+    }
+    .technologiesUtilisee {
+        flex-wrap: wrap;
+    }
 }

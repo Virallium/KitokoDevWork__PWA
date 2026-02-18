@@ -1,10 +1,16 @@
-const CACHE_NAME = 'kitoko-cache-v1';
+const CACHE_NAME = 'kitoko-cache-v2';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
+  '/offline.html',
   '/styles/style.css',
-  '/js/index.js',
-  // ajoute ici les fichiers importants
+  '/styles/media.css',
+  '/js/components.js',
+  '/js/style.js',
+  '/js/serviceworker.js',
+  '/photos/KitokoDevWork_logo.webp',
+  '/photos/LogoAnimateKitokoDevWork.webp',
+  '/manifest.json'
 ];
 
 self.addEventListener('install', (event) => {
@@ -24,22 +30,32 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  // simple stratégie cache-first
+  // Navigation requests: network-first, offline fallback
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .then(res => {
+          const resClone = res.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, resClone));
+          return res;
+        })
+        .catch(() => caches.match(event.request)
+          .then(cached => cached || caches.match('/offline.html'))
+        )
+    );
+    return;
+  }
+
+  // Other requests: cache-first
   event.respondWith(
     caches.match(event.request).then(cached => {
       if (cached) return cached;
       return fetch(event.request).then(res => {
-        // optionnel : mettre dans le cache les réponses GET
         if (event.request.method === 'GET' && res && res.status === 200) {
           const resClone = res.clone();
           caches.open(CACHE_NAME).then(cache => cache.put(event.request, resClone));
         }
         return res;
-      }).catch(() => {
-        // fallback si nécessaire (page offline)
-        if (event.request.mode === 'navigate') {
-          return caches.match('/index.html');
-        }
       });
     })
   );

@@ -3,24 +3,23 @@
   "short_name": "Kitoko Dev",
   "description": "La qualité à votre service",
   "start_url": "/",
+  "id": "/",
   "background_color": "#0A1A28",
-  "theme_color": "white",
+  "theme_color": "#112e42",
   "display": "standalone",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "KitokoDevWork_logo.ico",
+      "src": "photos/KitokoDevWork_logo.webp",
       "sizes": "192x192",
-      "type": "image/ico"
+      "type": "image/webp",
+      "purpose": "any"
     },
     {
-      "src": "KitokoDevWork_logo.ico",
+      "src": "photos/KitokoDevWork_logo.webp",
       "sizes": "512x512",
-      "type": "image/ico"
-    },
-    {
-      "src": "KitokoDevWork_logo.ico",
-      "sizes": "1080x1080",
-      "type": "image/ico"
+      "type": "image/webp",
+      "purpose": "any"
     }
   ]
 }

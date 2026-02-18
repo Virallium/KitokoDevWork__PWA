@@ -120,7 +120,7 @@
     <footer class="footer">
       <div class="section__container footer__container">
         <div class="footer__logo scrollAnimation">
-          <img src="/photos/KitokoDevWork_logo.webp" alt="Logo KitokoDevWork" width="200" height="50" loading="lazy">
+          <img src="/photos/KitokoDevWork_logo.webp" alt="Logo KitokoDevWork" width="200" loading="lazy">
         </div>
         <div class="footer__content">
           <p class="scrollAnimation">

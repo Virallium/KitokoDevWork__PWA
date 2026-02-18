@@ -1,4 +1,4 @@
-/* ── Preloader removal ── */
+/* ── Preloader removal (must wait for full page load) ── */
 window.addEventListener("load", () => {
     const preloader = document.querySelector(".preloader");
     if (preloader) {
@@ -9,8 +9,11 @@ window.addEventListener("load", () => {
             }, { once: true });
         }, 600);
     }
+});
 
-    /* ── Mobile nav toggle ── */
+/* ── Mobile nav toggle ── */
+/* Runs immediately: components.js (defer, loaded before) has already injected the header */
+(function () {
     const closedbtn = document.querySelector("#close");
     const rgba = document.querySelector(".rgbafornavphone");
     const ul = document.querySelector("nav ul");
@@ -54,7 +57,7 @@ window.addEventListener("load", () => {
             dialog.classList.remove("dialogopen");
         });
     }
-});
+})();
 
 /* ── Scroll animation observer ── */
 const observer = new IntersectionObserver((entries) => {

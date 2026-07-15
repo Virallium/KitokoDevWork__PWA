@@ -10,13 +10,12 @@
 
   const pages = {
     index:              { label: 'Accueil',            path: '/' },
-    apropos:            { label: 'À propos',           path: '/html/apropos' },
-    catalogue:          { label: 'Catalogue',          path: '/html/catalogue' },
-    services:           { label: 'Services',           path: '/html/services' },
-    portfolio:          { label: 'Portfolio – Miradi', path: '/html/portfolio' },
-    portfolioEustache:  { label: 'Portfolio – Eustache', path: '/html/portfolioEustache' }
+    apropos:            { label: 'À propos',           path: '/html/apropos.html' },
+    catalogue:          { label: 'Catalogue',          path: '/html/catalogue.html' },
+    services:           { label: 'Services',           path: '/html/services.html' },
+    portfolio:          { label: 'Portfolio – Miradi', path: '/html/portfolio.html' },
+    portfolioEustache:  { label: 'Portfolio – Eustache', path: '/html/portfolioEustache.html' }
   };
-
   function getCurrentPage() {
     for (const [key, page] of Object.entries(pages)) {
       if (path === page.path || path === page.path + '.html' || (key === 'index' && (path === '/' || path === '/index' || path === '/index.html'))) {

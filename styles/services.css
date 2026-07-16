@@ -1,10 +1,28 @@
-:root{
-    --secondary-color:#112e42;
-    --bg2-color:#fff;
-    --bg-color:#ededed;
-    --main-color:#00abf0;
+:root {
+    /* Palette technologique moderne */
+    --secondary-color: #112e42;
+    --bg2-color: #ffffff;
+    --bg-color: #f8fafc;
+    --main-color: #00abf0;
+    --main-color-rgb: 0, 171, 240;
+    --accent-color: #6366f1; /* Indigo moderne pour les dégradés */
+    --text-primary: #0f172a;
+    --text-muted: #475569;
+    --card-shadow: 0 10px 30px -10px rgba(17, 46, 66, 0.08);
+    --border-radius: 16px;
+    
+    /* Typographie Fluide sans media queries (clamp) */
     --font-family: 'Poppins', sans-serif;
+    --fs-h1: clamp(2rem, 4vw + 1rem, 3.5rem);
+    --fs-h2: clamp(1.5rem, 3vw + 0.8rem, 2.25rem);
+    --fs-body: clamp(0.95rem, 1vw + 0.5rem, 1.1rem);
+    --fs-small: clamp(0.8rem, 0.8vw + 0.4rem, 0.95rem);
+
+    /* Espacements Fluides (clamp & calc) */
+    --space-section: clamp(4rem, 8vw, 8rem);
+    --container-padding: clamp(1rem, 5vw, 4rem);
 }
+
 .darkmode{
     --secondary-color: #0A1A28;   /* Plus sombre, idéal pour headers */
     --bg2-color: #E6F7FF;       /* Blanc légèrement bleuté = lisibilité */
@@ -16,6 +34,7 @@
 body{
     overflow-x:hidden;
     width: 100%;
+    min-height: 100vh;
 }
 /*All elements*/
 *{
@@ -26,341 +45,362 @@ body{
     scroll-behavior: smooth;
     outline: none;
     box-sizing: border-box;
-    color:var(--secondary-color);
     font-family: 'Poppins', sans-serif;
 }
-header{
-    z-index: 999;
-}
+/* ==========================================================================
+   PAGE SERVICES - RECHERCHE DYNAMIQUE & GRILLE DE CARTES
+   ========================================================================== */
+/* ==========================================================================
+   STYLISATION DE LA CARTE COMPOSANT DYNAMIQUE (.contentsHTML)
+   ========================================================================== */
 
-/*Loading Animation*/
-.preloader{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.contentsHTML {
+    background: var(--bg2-color);
+    border-radius: var(--border-radius);
+    padding: 2.25rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(15, 23, 42, 0.03);
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--secondary-color);
-    z-index: 9999;
-    transition: opacity .6s ease, visibility .6s ease;
-    animation: preloaderFallback .6s 5s forwards;
-}
-.preloader.remove{
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-@keyframes preloaderFallback{
-    to{ opacity:0; visibility:hidden; pointer-events:none; }
-}
-#logo-img-box1{
-    width: 250px;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 16px solid;
-    border-left-color: var(--bg-color);
-    border-bottom-color: transparent;
-    border-top-color: transparent;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    border-right-color:transparent;
-    background: var(--secondary-color);
-    box-shadow: 3px 3px 9px var(--bg-color);
+    position: relative;
     overflow: hidden;
-    position: relative;
-    z-index: 10;
-    animation: loadingAnimation 5s linear infinite;
-    -webkit-animation: loadingAnimation 5s linear infinite;
-    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.logo-img-box2{
-    width: 200px;
-    height: 200px;
+
+.darkmode .contentsHTML {
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.contentsHTML:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 35px -10px rgba(7, 17, 26, 0.15);
+}
+
+/* 1. L'icône de l'entreprise */
+.iconentreprise {
+    width: 100%;
+    height: 300px;
+    background: rgba(var(--main-color-rgb), 0.08);
+    border-radius: 12px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    position: absolute;
-    animation: logoAnimate 1s linear infinite;
-    -webkit-animation: logoAnimate 3s ease-out infinite;z-index: 10;
-}
-
-/*LOADING ANIMATION KEYFRAME*/
-    @keyframes loadingAnimation {
-        from{
-            transform: rotate(0);
-            -webkit-transform: rotate(0);
-            -moz-transform: rotate(0);
-            -ms-transform: rotate(0);
-            -o-transform: rotate(0);
-        }
-        to{
-            transform: rotate(1turn);
-            -webkit-transform: rotate(1turn);
-            -moz-transform: rotate(1turn);
-            -ms-transform: rotate(1turn);
-            -o-transform: rotate(1turn);
-    }
-}
-@keyframes logoAnimate {
-    from{
-        transform: scale(1);
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
-    }
-    to{
-        transform: scale(1.3);
-        -webkit-transform: scale(1.3);
-        -moz-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        -o-transform: scale(1.3);
-}
-}
-.header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: var(--secondary-color);
-    width: 100%;
-    height: 90px;
-    position: fixed;
-    top: 0;
-    z-index: 99999;
-}
-/* Nav */
-nav{
-    display: flex;
-    gap: 2rem;
-}
-nav ul{
-    display: flex;
     justify-content: center;
-    gap:1rem;
-}
-nav ul li{
-      color: var(--bg-color);
-      position: relative;
-}
-nav ul li a{
-    position: relative;
-    color: var(--bg-color);
-}
-nav ul li a::before{
-    content: '';
-    border-radius: 10px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: var(--main-color);
-    z-index: 100;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    transition: .7s ease-out;
-    -webkit-transition: .7s ease-out;
-    -moz-transition: .7s ease-out;
-    -ms-transition: .7s ease-out;
-    -o-transition: .7s ease-out;
-}
-nav ul li a:hover::before{
-    width: 100%;
-}
-#close{
-    display: none;
-}
-#bar{
-    display: none;
-}
-i{
-    font-size: 1.2rem;
-    color: var(--bg-color);
+    margin-bottom: 1.5rem;
+    border: var(--border-radius);
+    overflow: hidden;
 }
 
-.technicSupport p{
-    display: none;
-}
-.technicSupport{
-    position: relative;
-    bottom: .5rem;
-    margin-left: 2rem;
-}
-.technicSupport span i{
-    background: var(--main-color);
+.iconentreprise img {
     width: 100%;
+    object-fit: cover;
+    object-position: center;
     height: 100%;
-    padding: .5rem;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    transition: background .5s ease;
-    -webkit-transition: background .5s ease;
-    -moz-transition: background .5s ease;
-    -ms-transition: background .5s ease;
-    -o-transition: background .5s ease;
-}
-.technicSupport span i:hover{
-    background: var(--bg-color);
-    color: var(--secondary-color);
-}
- 
-.Active{
-    position: relative;
-}
-.Active::before{
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background:var(--secondary-color);
 }
 
-.input{
-    width: 100%;
-    height: 100%;
-    padding: 2rem;
-    margin-top: 5rem;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-input[type="text"]{
-    width: 300px;
-    max-width: 100%;
-    padding: .6rem 2rem;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    border: none;
-}
-.services{
+/* 2. Bloc du haut (Nom, Prix, Dispo) */
+.txt_top {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 1.25rem;
 }
-.h1services{
-    font-size: clamp(2rem,5vw,3rem);
+
+.servicesNom {
+    font-size: 1.4rem;
+    font-weight: 600;
     color: var(--secondary-color);
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.darkmode .servicesNom {
+    color: #ffffff;
+}
+
+.prix {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--main-color);
+    margin: 0;
+}
+
+.servicesDisponible {
+    font-size: var(--fs-small);
+    font-weight: 500;
+    color: #10b981; /* Vert moderne pour "Disponible" */
+    background: rgba(16, 185, 129, 0.1);
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    display: inline-block;
+    width: fit-content;
+    margin: 0;
+}
+
+/* 3. Zone Centrale (Descriptions) */
+.txt_center {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Permet d'égaliser le contenu si un texte est plus court */
+}
+
+.txt_center .description {
+    font-size: var(--fs-body);
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Paragraphe additionnel (ex: Ce que ça concerne) */
+.txt_center p:not(.description) {
+    font-size: var(--fs-small);
+    color: var(--text-muted);
+    opacity: 0.85;
+    font-style: italic;
+    margin: 0;
+}
+
+/* 4. Éléments du bas (Lien / Tags / Durée) */
+.li {
+    font-size: var(--fs-small);
+    font-weight: 500;
+    color: var(--main-color);
+    margin: 0 0 1rem 0;
+}
+
+.contentsHTML .duree {
+    font-size: var(--fs-small);
+    font-weight: 600;
+    color: var(--secondary-color);
+    background: rgba(var(--main-color-rgb), 0.05);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
     text-align: center;
+    margin: auto 0 0 0; /* Force l'alignement tout au fond de la carte */
 }
-.container{
+
+.darkmode .contentsHTML .duree {
+    color: #cbd5e1;
+    background: rgba(255, 255, 255, 0.03);
+}
+.services {
+    padding: var(--space-section) var(--container-padding);
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   1. BARRE DE RECHERCHE (.input)
+   -------------------------------------------------------------------------- */
+.input {
+    max-width: 500px;
+    margin: calc(var(--space-section) * 0.8) auto 0 auto;
+    padding: 0 var(--container-padding);
+    position: relative;
+}
+
+/* Stylisation du champ input */
+.input input[type="text"] {
+    width: 100%;
+    font-family: var(--font-family);
+    padding: 1.1rem 1.5rem;
+    padding-left: 3rem; /* Espace pour l'icône loupe si ajoutée en fond */
+    background: var(--bg2-color);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    color: var(--text-primary);
+    font-size: 1rem;
+    border-radius: 50px; /* Style pilule moderne */
+    outline: none;
+    box-shadow: var(--card-shadow);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.darkmode .input input[type="text"] {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Effets au focus */
+.input input[type="text"]:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 10px 25px -5px rgba(var(--main-color-rgb), 0.2);
+    transform: translateY(-2px);
+}
+
+/* Placeholder */
+.input input[type="text"]::placeholder {
+    color: var(--text-muted);
+    opacity: 0.8;
+}
+
+/* --------------------------------------------------------------------------
+   2. TITRE PRINCIPAL (.h1services)
+   -------------------------------------------------------------------------- */
+.h1services {
+    font-size: var(--fs-h1);
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+    position: relative;
+}
+
+.h1services::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--main-color);
+    border-radius: 2px;
+    margin: 0.75rem auto 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. GRILLE DYNAMIQUE CONTENEUR (.container)
+   -------------------------------------------------------------------------- */
+.boxcards {
+    width: 100%;
+}
+
+.container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
-    width: 100%;
-    margin: 0 auto;
+    /* Crée une grille adaptative qui s'organise selon la taille de l'écran */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    align-items: stretch;
 }
-.contentsHTML{
-    background: var(--bg-color);
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+/* Cible le div direct injecté par votre JS (chaque service) */
+.container > div {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    width: 100%;
     height: 100%;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
 }
-.iconentreprise img{
-    width: 100%;
-}
-.txt_top{
-    font-size: clamp(1.2rem,2.5vw,1.5rem);
-    color: var(--secondary-color);
+
+/* --------------------------------------------------------------------------
+   4. DESIGN DES CARTES DE SERVICES INJECTÉES (Classes génériques probables)
+   -------------------------------------------------------------------------- */
+/* Note : Ces sélecteurs ciblent la structure standard générée par generateHTML */
+.service-card, 
+.container > div > div { 
+    background: var(--bg2-color);
+    border-radius: var(--border-radius);
+    padding: 2.5rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(15, 23, 42, 0.03);
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    margin: 1rem 0;
-    align-items: center;
-}
-.servicesNom{
-    font-weight: bold;
-    flex-wrap: wrap;
-    font-size: clamp(1rem, 2vw, 2rem);
-}
-.servicesDisponible{
-    font-weight: bold;
-    color: var(--secondary-color);
-    background: var(--bg-color);
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-    padding: .4rem;
-}
-.prix{
-    font-weight: bold;
-    color: var(--bg-color);
-    background: var(--secondary-color);
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-    padding: .4rem;
-    font-size: 1.3rem;
-}
-.txt_center{
-    font-size: clamp(1rem,2.2vw,1.2rem);
-    color: var(--secondary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    width: 90%;
-    gap: 1rem;
+    gap: 1.25rem;
+    height: 100%;
+    flex-grow: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.description{
-    font-size: 1.3rem;
-    width: 90%;
-    display: flex;
-  text-align: center;
+
+.darkmode .service-card,
+.darkmode .container > div > div {
+    border-color: rgba(255, 255, 255, 0.05);
 }
-.li{
-    font-size: 1.2rem;
+
+.container > div > div:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 35px -10px rgba(7, 17, 26, 0.15);
+}
+
+/* Stylisation des éléments internes typiques d'une carte service */
+.container > div > div i {
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.container > div > div h2 {
+    font-size: 1.35rem;
     color: var(--secondary-color);
-    text-align: left;
-    width: 90%;
+    font-weight: 600;
 }
 
-.duree{
-    font-weight: bold;
-    color: var(--bg-color);
-    background: var(--secondary-color);
-    padding: 10px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
+.darkmode .container > div > div h2 {
+    color: #ffffff;
 }
-.cart-shop{
+
+.container > div > div p {
+    font-size: var(--fs-body);
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Bouton ou lien à l'intérieur de la carte */
+.container > div > div a,
+.container > div > div button {
+    margin-top: auto; /* Aligne le CTA tout en bas */
+    display: inline-block;
+    text-align: center;
+    padding: 0.85rem;
+    background: rgba(var(--main-color-rgb), 0.1);
+    color: var(--main-color);
+    border: 1px solid rgba(var(--main-color-rgb), 0.2);
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container > div > div a:hover,
+.container > div > div button:hover {
+    background: var(--main-color);
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(var(--main-color-rgb), 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   5. ÉTAT D'ERREUR DYNAMIQUE (Aucun service trouvé)
+   -------------------------------------------------------------------------- */
+.container > p {
+    grid-column: 1 / -1; /* Prend toute la largeur de la grille */
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    padding: 3rem 1rem;
+    margin: 0;
+}
+
+.container .cart-shop {
+    grid-column: 1 / -1;
+    text-align: center;
     font-size: 4rem;
-    margin-bottom: 10rem;
+    margin-top: -1rem;
+    animation: pulseCart 2s infinite ease-in-out;
 }
 
+/* --------------------------------------------------------------------------
+   6. ANIMATIONS UTILITAIRES
+   -------------------------------------------------------------------------- */
+@keyframes pulseCart {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* --------------------------------------------------------------------------
+   7. RESPONSIVE MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .container > div > div {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .input input[type="text"] {
+        padding: 0.9rem 1.2rem;
+    }
+    
+    .h1services {
+        margin-bottom: 2.5rem;
+    }
+}

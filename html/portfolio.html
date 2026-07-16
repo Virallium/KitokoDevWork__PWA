@@ -76,15 +76,8 @@
 </head>
 <body>
     <main>
-            <div class="preloader" role="status" aria-label="Chargement">
-                <div id="logo-img-box1">
-                    <div class="logo-img-box2">
-                        <img src="/photos/LogoAnimateKitokoDevWork.webp" alt="Logo KitokoDevWork" width="200" height="200">
-                    </div>
-                </div>
-            </div>
             <div id="shared-header"></div>
-            <div id="shared-breadcrumbs"></div>
+            <div id="shared-breadcrumbs" style="margin-top:6rem;"></div>
             <section class="portfolio_pres">
                 <div class="text_pres_portf" data-aos="fade-right">
                     <p class="portfolio-intro">Bonjour, je m'appelle <span>Miradi</span> et je suis</p>
@@ -140,14 +133,18 @@
                     </div>
                 </div>
             </section>
-        <div id="shared-footer"></div>
     </main>
     <div id="offline-banner" class="offline-banner" hidden>
       <p>Vous êtes hors ligne. Certaines fonctionnalités peuvent être limitées.</p>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script>
-        document.addEventListener('DOMContentLoaded', () => AOS.init());
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+            once: true, // ÉLÉMENT CRITIQUE : Anime une seule fois et arrête d'écouter le scroll sur cet élément
+            duration: 800
+            });
+        });
     </script>
 </body>
 </html>

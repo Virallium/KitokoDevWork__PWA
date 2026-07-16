@@ -102,6 +102,7 @@
     
     <script src="/js/components.js" defer></script>
     <script src="/js/style.js" defer></script>
+    <script src="/js/index.js" type="module"></script>
     <script src="/js/serviceworker.js" defer></script>
     <!--fontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -164,41 +165,6 @@
                     </div>
                 </div>
             </div>
-            <div class="projets">
-                <div class="pj scrollAnimation">
-                    <img src="./photos/img_1.svg" alt="Maquette site Cyber Café Le Papillon" width="250px">
-                    <h2>Site informatif Cyber café</h2>
-                    <div class="pjbox">
-                        <h2>Projets Réalisés</h2>
-                        <p>Découvrez quelques-uns de nos projets récents qui illustrent notre savoir-faire en matière de création de sites web professionnels et performants.</p>
-                        <div class="hoverBox">
-                            <a href="https://le-papillon-d6bcf.web.app" target="_blank">Consulter</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="pj scrollAnimation">
-                    <img src="./photos/img_2.svg" alt="Maquette site vente de miels" width="250px">
-                    <h2>Ancien Site web entreprise de vente des miels</h2>
-                    <div class="pjbox">
-                        <h2>Projets Réalisés</h2>
-                        <p>Découvrez quelques-uns de nos projets récents qui illustrent notre savoir-faire en matière de création de sites web professionnels et performants.</p>
-                        <div class="hoverBox">
-                            <a href="https://entreprisemiel.firebaseapp.com" target="_blank">Consulter</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="pj scrollAnimation">
-                    <img src="/" alt="Maquette site e-commerce chaussures" width="250px">
-                    <h2>Ancien Site E-commerce Vente des chaussures</h2>
-                    <div class="pjbox">
-                        <h2>Projets Réalisés</h2>
-                        <p>Découvrez quelques-uns de nos projets récents qui illustrent notre savoir-faire en matière de création de sites web professionnels et performants.</p>
-                        <div class="hoverBox">
-                            <a href="https://kdevwork-maquette03.web.app/index.html" target="_blank">Consulter</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
     </section>
     <section class="pourquoiNous">
         <h2 class="scrollAnimation">Pourquoi Nous choisir?</h2>
@@ -244,6 +210,10 @@
                 </div>
                  <h2>Statut de l’entreprise</h2> <p> <strong>KitokoDevWork</strong> est une jeune entreprise innovante spécialisée dans la création de sites web et l’accompagnement digital des TPE et PME en République Démocratique du Congo. </p> <p> Actuellement, nous exerçons sous le statut d’<strong>auto-entrepreneur / entreprise individuelle</strong>, ce qui nous permet d’être : <br>— plus flexible, <br>— plus réactif, <br>— plus proche de nos clients et de leurs besoins réels. </p> <p> Notre objectif est de devenir une <strong>agence digitale officiellement enregistrée</strong>, avec une équipe complète et des services encore plus avancés pour soutenir la digitalisation des entreprises congolaises. </p> <p> L’aventure ne fait que commencer, et nous sommes déterminés à grandir avec nos clients ! </p>
         </div>
+        <div class="projets">
+            <h2 class="scrollAnimation">Nos Projets</h2>
+            <div class="projectContainer scrollAnimation"></div>
+         </div>
     </section>
     <section class="testimonies scrollAnimation">
         <div class="swiper mySwiper">
@@ -422,18 +392,18 @@
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-          var swiper = new Swiper(".mySwiper", {
-            spaceBetween: 30,
-            centeredSlides: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-          });
+            var swiper = new Swiper(".mySwiper", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
         });
     </script>
   </body>

@@ -54,7 +54,7 @@ window.addEventListener("load", () => {
         closeDialog.addEventListener("click", () => {
             dialog.close();
             dialog.classList.add("removeDialog");
-            dialog.classList.remove("dialogopen");
+            dialog.classList.remove("dialogOpen");
         });
     }
 })();

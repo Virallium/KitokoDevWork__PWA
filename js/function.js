@@ -18,3 +18,18 @@ export function generateHTML(services){
         </div>
     `
 }
+
+export function generateProjects(projects){
+    return `
+        <div class="pj scrollAnimation">
+            <img src="${projects.photo}" alt="${projects.alt}" width="250px">
+            <h2>${projects.type_site}</h2>
+            <div class="pjbox">
+                <p>Découvrez quelques-uns de nos projets récents qui illustrent notre savoir-faire en matière de création de sites web professionnels et performants.</p>
+                <div class="hoverBox">
+                    <a href="${projects.lien}" target="_blank">Consulter</a>
+                </div>
+            </div>
+        </div>
+    `
+}

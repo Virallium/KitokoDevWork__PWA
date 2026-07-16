@@ -10,7 +10,7 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "photos/KitokoDevWork_logo.webp",
+      "src": "/photos/KitokoDevWork_logo.webp",
       "sizes": "192x192",
       "type": "image/webp",
       "purpose": "any"

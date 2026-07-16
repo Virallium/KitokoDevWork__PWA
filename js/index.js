@@ -1,5 +1,5 @@
-import { data } from "./data.js";
-import { generateHTML } from "./function.js";
+import { data, projets } from "./data.js";
+import { generateHTML, generateProjects } from "./function.js";
 
 const productContainer = document.querySelector(".container");
 const input = document.querySelector("input");
@@ -25,13 +25,33 @@ const AfficherService = (services) => {
  };
 
 // Affiche tous les produits au chargement*/
- AfficherService(data);
+if (document.querySelector('.container')) {
+  AfficherService(data);
+}
 
 // Filtrage*/
- input.addEventListener("keyup", (e) => {
-   const value = e.target.value.toLowerCase();
-   const filtre = data.filter(p =>
-     p.nom.toLowerCase().includes(value)
-   );
-   AfficherService(filtre);
- });
+if (input) {
+  input.addEventListener("keyup", (e) => {
+    const value = e.target.value.toLowerCase();
+    const filtre = data.filter(p =>
+      p.nom.toLowerCase().includes(value)
+    );
+    AfficherService(filtre);
+  });
+}
+
+ 
+//Affichage des projets
+ const AfficherProjets = (projects) => {
+    const projectContainer = document.querySelector(".projectContainer")
+    projectContainer.innerHTML = ""
+    projects.forEach(project => {
+        const eachproject = document.createElement("div")
+        eachproject.classList.add('pj')
+        eachproject.innerHTML = generateProjects(project)
+        projectContainer.appendChild(eachproject)
+    })
+ }
+if (document.querySelector('.projectContainer')) {
+  AfficherProjets(projets)
+}

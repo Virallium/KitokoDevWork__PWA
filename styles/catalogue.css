@@ -1,282 +1,439 @@
-:root{
-    --secondary-color:#112e42;
-    --bg2-color:#fff;
-    --bg-color:#ededed;
-    --main-color:#00abf0;
+:root {
+    /* Palette technologique moderne */
+    --secondary-color: #112e42;
+    --bg2-color: #ffffff;
+    --bg-color: #f8fafc;
+    --main-color: #00abf0;
+    --main-color-rgb: 0, 171, 240;
+    --accent-color: #6366f1; /* Indigo moderne pour les dégradés */
+    --text-primary: #0f172a;
+    --text-muted: #475569;
+    --card-shadow: 0 10px 30px -10px rgba(17, 46, 66, 0.08);
+    --border-radius: 16px;
+    
+    /* Typographie Fluide sans media queries (clamp) */
     --font-family: 'Poppins', sans-serif;
+    --fs-h1: clamp(2rem, 4vw + 1rem, 3.5rem);
+    --fs-h2: clamp(1.5rem, 3vw + 0.8rem, 2.25rem);
+    --fs-body: clamp(0.95rem, 1vw + 0.5rem, 1.1rem);
+    --fs-small: clamp(0.8rem, 0.8vw + 0.4rem, 0.95rem);
+
+    /* Espacements Fluides (clamp & calc) */
+    --space-section: clamp(4rem, 8vw, 8rem);
+    --container-padding: clamp(1rem, 5vw, 4rem);
 }
-.darkmode{
-    --secondary-color: #0A1A28;   /* Plus sombre, idéal pour headers */
-    --bg2-color: #E6F7FF;       /* Blanc légèrement bleuté = lisibilité */
-    --bg-color: #0F2433;         /* Background global sombre */
-    --main-color: #00abf0;       /* On garde ton bleu vif */
-    --kitoko-color: #1E90FF;     /* Accent, liens / boutons */
-    --font-family: 'Poppins', sans-serif;
+/* ==========================================================================
+   PAGE CATALOGUE & TARIFS - STYLE PROFESSIONNEL DE VENTE
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. HERO BANNER PRINCIPALE (.principalebox)
+   -------------------------------------------------------------------------- */
+.catalogue {
+    padding: var(--space-section) var(--container-padding);
+    max-width: 1250px;
+    margin: 0 auto;
 }
-body{
-    overflow-x:hidden;
-    height: 100%;
-    width: 100%;
-}
- 
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style-type: none;
-    scroll-behavior: smooth;
-    outline: none;
-    box-sizing: border-box;
-    color:var(--secondary-color);
-    font-family: 'Poppins', sans-serif;
-}
-.catalogue{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    background: var(--bg-color);
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.catalogue .principalebox{
-    margin-top: 2.5rem;
-    width: 100%;
-    height: 100vh;
-    background: var(--main-color);
+.principalebox {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(150px, 350px, 400px), 1fr));
-    place-items: center;
-    text-align: center;
-    flex-direction: column;
-    gap:1rem;
-    padding: 1rem;
-    overflow: hidden;
-}
-.catalogue .principalebox .texts {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    width: 100%;
-    justify-content: center;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
     align-items: center;
-    
-}
-.catalogue .principalebox .texts h1{
-    font-size: clamp(2rem, 5vw, 4rem);
-    letter-spacing: 2px;
-    color: var(--bg-color);
-}
-.catalogue .principalebox .texts p{
-    font-size: clamp(1.5rem, 2.2vw,2.5rem);
-    color: var(--bg-color);
-    width: 90%;
-}
-.boxmodel{
-    width: 100%;
-    height: 100%;
-    background: var(--bg2-color);
-    position: absolute;
-    top: 0;
-    right: -50%;
-    z-index: -1;
-    clip-path: circle(50% at center center);
-}
-.cardboxs{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(clamp(150px, 350px, 100%),1fr));
-    gap: 1rem;
-    place-items: center;
-    padding: 2rem;
-    width: 100%;
-}
-.card{
-    width: 100%;
-    background: var(--bg-color);
-    margin: 0 1rem;
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-.card:hover{
-    transform: translateY(-10px);
-    -webkit-transform: translateY(-10px);
-    -moz-transform: translateY(-10px);
-    -ms-transform: translateY(-10px);
-    -o-transform: translateY(-10px);
-}
-.card .boximg img{
-    background-position: center;
-    background-size: cover;
-    aspect-ratio: 16/9;
-    
-}
-.h2catg{
-    font-size: 2rem;
-    color: var(--secondary-color);
-    text-align: center;
-}
-.boxtext{
-    display: flex;
-    
-    flex-direction: column;
-    gap: 1rem;
-}
-.btnCommander{
-    color: var(--secondary-color);
-    background: var(--bg2-color);
-    padding: .5rem;
-    width: fit-content;
-    border-radius: 16px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    -ms-border-radius: 16px;
-    -o-border-radius: 16px;
-    font-weight: 550;
-    cursor: pointer;
-}
-.btnCommander:hover{
-    background: var(--secondary-color);
-    color: var(--bg-color);
-}
-/* forme initial de dialog caché avant l'apparition accompagné d'une animation */
-dialog {
-    width: 600px;
-    max-width: 90%;
-    padding: 1rem 26px;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    transform: translateY(-50px);
-    opacity: 0;
-    transition:transform 0.5s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:2rem;
-    flex-direction: column;
-    overflow: hidden;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #0c1e2f 100%);
+    padding: 3.5rem;
+    border-radius: var(--border-radius);
+    color: #ffffff;
     position: relative;
-    z-index: 100;
-    -webkit-transition:transform 0.5s;
-    -moz-transition:transform 0.5s;
-    -ms-transition:transform 0.5s;
-    -o-transition:transform 0.5s;
-    margin:auto auto;
-    text-align:center;
-    display: none;
-}
-dialog h2{
-    margin-bottom: .3rem;
-}
-#userIcon{
-    font-size: 1.3rem;
-    background: var(--bg-color);
-    padding: .3rem;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
-dialog form{
-    display: flex;
-    flex-direction: column;
-    gap: .3rem;
-    text-align:start;
-}
-dialog form input{
-    padding: .3rem;
-    color: var(--secondary-color);
-    border-radius: .3rem;
-    border: 1px solid;
-    -webkit-border-radius: .3rem;
-    -moz-border-radius: .3rem;
-    -ms-border-radius: .3rem;
-    -o-border-radius: .3rem;
-    width: 100%;
-}
-form button{
-    padding: .6rem;
-    background: var(--main-color);
-    font-weight: 600;
-    font-size: 1.1rem;
-    border: none;
-    transition: .6s;
-    -webkit-transition: .6s;
-    -moz-transition: .6s;
-    -ms-transition: .6s;
-    -o-transition: .6s;
-}
-form button:hover{
-    background: var(--secondary-color);
-    color: var(--main-color);
-    cursor: pointer;
-}
-textarea{
-    padding: .2rem;
-}
-#closecmdBtn{
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: .3rem;
-    color: var(--secondary-color);
-    background: var(--main-color);
-    cursor: pointer;
-    transition: .5s;
-    -webkit-transition: .5s;
-    -moz-transition: .5s;
-    -ms-transition: .5s;
-    -o-transition: .5s;
-}
-#closecmdBtn:hover{
-    background: var(--secondary-color);
-    color: var(--main-color);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 4rem;
 }
 
-.dialogOpen {
-    display: block;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-    opacity: 1;
+.darkmode .principalebox {
+    background: linear-gradient(135deg, var(--bg2-color) 0%, #07111a 100%);
+    border: 1px solid rgba(56, 189, 248, 0.08);
 }
-.removeDialog{
-    display: none;
+
+.principalebox .texts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    z-index: 2;
+}
+
+.principalebox .texts h1 {
+    font-size: var(--fs-h1);
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.principalebox .texts p {
+    font-size: var(--fs-body);
+    color: #cbd5e1;
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+/* Image/Illustration E-commerce */
+.principalebox img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    justify-self: center;
+    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3));
+    z-index: 2;
+    animation: floating 4s ease-in-out infinite;
+}
+
+/* Élément décoratif en arrière-plan */
+.boxmodel {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(var(--main-color-rgb), 0.2) 0%, transparent 70%);
+    bottom: -80px;
+    right: -50px;
+    z-index: 1;
     pointer-events: none;
 }
-.video{
-    width: 600px;
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+/* --------------------------------------------------------------------------
+   2. TITRE DE SECTION INTERMÉDIAIRE (.h2catg)
+   -------------------------------------------------------------------------- */
+.h2catg {
+    font-size: var(--fs-h2);
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
 }
 
-.offres{
-    width: 100%;
+.h2catg::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: var(--main-color);
+    border-radius: 2px;
+    margin: 0.75rem auto 0;
+}
+
+/* --------------------------------------------------------------------------
+   3. GRILLE DES CARTES DE PACKS (.cardboxs)
+   -------------------------------------------------------------------------- */
+.cardboxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 5rem;
+    align-items: stretch; /* Force les cartes à avoir la même hauteur */
+}
+
+.card {
+    background: var(--bg2-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(15, 23, 42, 0.03);
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.darkmode .card {
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 40px -10px rgba(7, 17, 26, 0.15);
+}
+
+/* Image de présentation du pack */
+.card .boximg {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card .boximg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .boximg img {
+    transform: scale(1.06);
+}
+
+/* Corps textuel de la carte */
+.card .boxtext {
+    padding: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Pousse le bouton vers le bas pour l'alignement */
+}
+
+.card .boxtext h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+    text-transform: capitalize;
+}
+
+.card .boxtext p {
+    font-size: var(--fs-body);
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+
+/* Informations de délais */
+.card .duree {
+    background: rgba(var(--main-color-rgb), 0.06);
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    margin-top: auto; /* Aligne le bloc juste au-dessus du prix */
+    margin-bottom: 1.25rem;
+}
+
+.card .duree p {
+    font-size: var(--fs-small);
+    color: var(--main-color);
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+/* Zone Tarifaire */
+.card .boxtext span {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.darkmode .card .boxtext span {
+    color: #ffffff;
+}
+
+/* Boutons d'appel à l'action (CTA) */
+.btnCommander {
+    display: block;
+    text-align: center;
+    padding: 0.9rem;
+    background: var(--main-color);
+    color: #ffffff;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(var(--main-color-rgb), 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btnCommander:hover {
+    background-color: #008ec7;
+    transform: translateY(-2px);
+}
+
+/* Style spécifique pour différencier le premier bouton s'il est nommé différemment ou selon l'ordre */
+.card:nth-child(2) .btnCommander {
+    background: var(--secondary-color);
+}
+.darkmode .card:nth-child(2) .btnCommander {
+    background: #0ea5e9;
+}
+.card:nth-child(2) .btnCommander:hover {
+    background: #0b1724;
+}
+
+/* --------------------------------------------------------------------------
+   4. MODALE DE COMMANDE FENÊTRE DIALOG (<dialog>)
+   -------------------------------------------------------------------------- */
+dialog#dialog {
+    border: none;
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    background: var(--bg2-color);
+    color: var(--text-primary);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    max-width: 480px;
+    width: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+}
+
+/* Arrière-plan flouté natif de la modale */
+dialog#dialog::backdrop {
+    background: rgba(7, 17, 26, 0.6);
+    backdrop-filter: blur(5px);
+}
+
+/* Bouton Fermer (Icône X) */
+#closecmdBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 0.5rem;
+}
+
+#closecmdBtn:hover {
+    color: #ef4444;
+    transform: scale(1.1);
+}
+
+dialog#dialog h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+#userIcon {
+    display: block;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Formulaire interne */
+dialog form {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
-.offres h2{
-    font-size: clamp(2rem, 2vw, 3rem);
+
+dialog form label {
+    font-size: var(--fs-small);
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: -0.25rem;
 }
- iframe{
-    width: 300px;
+
+dialog form input, 
+dialog form textarea {
+    width: 100%;
+    font-family: var(--font-family);
+    padding: 0.85rem 1rem;
+    background: var(--bg-color);
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    color: var(--text-primary);
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.darkmode dialog form input,
+.darkmode dialog form textarea {
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+dialog form input:focus, 
+dialog form textarea:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 3px rgba(var(--main-color-rgb), 0.15);
+}
+
+dialog form textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+dialog form button[type="submit"] {
+    margin-top: 0.5rem;
+    font-family: var(--font-family);
+    cursor: pointer;
+    background: var(--main-color);
+    color: #ffffff;
+    font-weight: 600;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+dialog form button[type="submit"]:hover {
+    background-color: #008ec7;
+}
+
+/* --------------------------------------------------------------------------
+   5. SECTION OFFRES (VIDÉO FACEBOOK)
+   -------------------------------------------------------------------------- */
+.offres {
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.offres h2 {
+    font-size: var(--fs-h2);
+    margin-bottom: 2.5rem;
+}
+
+.offres .video {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg2-color);
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
     max-width: 100%;
- }
+    overflow: hidden;
+    border: 1px solid rgba(15, 23, 42, 0.03);
+}
+
+.darkmode .offres .video {
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+.offres .video iframe {
+    border-radius: calc(var(--border-radius) - 6px);
+    max-width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   6. ANIMATIONS UTILITAIRES
+   -------------------------------------------------------------------------- */
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* --------------------------------------------------------------------------
+   7. RESPONSIVE RUPTURES D'ÉCRANS
+   -------------------------------------------------------------------------- */
+@media (max-width: 968px) {
+    .principalebox {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2.5rem 1.5rem;
+    }
+    .principalebox img {
+        max-width: 240px;
+        order: -1; /* Place l'image au-dessus du texte sur tablette/mobile */
+    }
+    .principalebox .texts p {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardboxs {
+        grid-template-columns: 1fr;
+    }
+    dialog#dialog {
+        padding: 1.5rem;
+    }
+    .offres .video {
+        padding: 0.5rem;
+    }
+}

@@ -33,16 +33,16 @@
     const current = getCurrentPage();
 
     const navLinks = [
-      { key: 'index',     label: 'ACCUEIL' },
-      { key: 'apropos',   label: 'APROPOS' },
-      { key: 'catalogue', label: 'CATALOGUE' },
-      { key: 'services',  label: 'SERVICES' }
+      { key: 'index',     label: 'ACCUEIL', icon:'' },
+      { key: 'apropos',   label: 'APROPOS', icon:'' },
+      { key: 'catalogue', label: 'CATALOGUE', icon:'' },
+      { key: 'services',  label: 'SERVICES',  icon:'' }
     ];
 
     const linksHTML = navLinks.map(link => {
       const isActive = link.key === current || 
-        (current === 'portfolioEustache' && link.key === 'apropos');
-      return `<li><a href="${pages[link.key].path}"${isActive ? ' class="Active"' : ''}${link.key === 'index' ? ' id="accueil"' : ''}>${link.label}</a></li>`;
+        (current === 'portfolioEustache' && link.key === 'apropos');/*Ajout des icons après */
+      return `<li><a href="${pages[link.key].path}"${isActive ? ` class="Active"` : ''}${link.key === 'index' ? ' id="accueil"' : ''} data-text="${link.icon}">${link.label}</a></li>`;
     }).join('\n            ');
 
     target.innerHTML = `
@@ -127,7 +127,7 @@
             Notre mission est de concevoir des sites web uniques et performants, en combinant design,
             innovation et expérience utilisateur pour aider votre entreprise à se démarquer en ligne.
           </p>
-          <div>
+          <div class="footer_links_box">
             <ul class="footer__links">
               <li class="scrollAnimation">
                 <span><i class="fa-solid fa-location-dot"></i></span> RDC, Kinshasa

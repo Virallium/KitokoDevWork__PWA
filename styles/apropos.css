@@ -75,6 +75,7 @@ body{
     background: linear-gradient(135deg, rgba(var(--main-color-rgb), 0.08) 0%, rgba(99, 102, 241, 0.08) 100%),
                 url('/photos/KitokoDevWork_photo_web10.webp') center/cover no-repeat;
     background-attachment: fixed; /* Effet parallaxe léger */
+    margin:2rem 0 0 0;
 }
 
 .surnous_top::before {

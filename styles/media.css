@@ -173,12 +173,12 @@
         transform: scaleX(1);
         transform-origin: left;
     }
-    .Active_lk:not(.technicSupport) {
+    .Active:not(.technicSupport) {
         color: var(--main-color);
         font-weight: 600;
         position: relative;
     }
-    .Active_lk:not(.technicSupport)::after{
+    .Active:not(.technicSupport)::after{
         content: '';
         position: absolute;
         bottom: 0;
@@ -186,9 +186,6 @@
         width: 100%;
         height: 2px;
         background: linear-gradient(to right, var(--main-color), var(--accent-color));
-        transform: scaleX(1);
-        transform-origin: left;
-        transition: transform 0.3s ease;
 }
     
 

@@ -4,14 +4,9 @@ export const data=[
         nom:"Site vitrine",
         prix:"$120",
         disponibilite:"disponible",
-        description:"Pour présenter votre entreprise de manière professionnelle et percutante.",
+        description:"Présentez votre activité avec un site professionnel, clair et responsive.",
         concerne:"pour PME, ASBL, Eglise, Agence, hôtel, institution, Autre",
-        li:`Design attrayant et sur mesure, 
-        Hébergement gratuit pendant 1 an,
-         Nom de domaine gratuit pendant 1 an,
-         Certificat SSL inclus,
-         Assistance gratuite pendant les 2 premières semaines,
-         Site responsive(Tablette, Téléphone, ordinateur),Pages, Articles,Intégration reseaux sociaux`,
+        li:"Design sur mesure, hébergement 1 an, domaine offert 1 an, SSL, support 2 semaines, responsive, pages et contenus",
         duree:"3jours"
     },
     {
@@ -19,9 +14,9 @@ export const data=[
         nom:"Site(institutionnel)",
         prix:"$180",
         disponibilite:"disponible",
-        description:"Une plateforme complète pour refléter vos valeurs et votre expertise.",
+        description:"Valorisez votre image avec un site structuré, moderne et adapté aux organisations.",
         concerne:"pour Entreprise, ONG, etc.",
-        li:"Design attrayant et sur mesure, Hébergement gratuit pendant 1 an, Nom de domaine gratuit pendant 1 an,Certificat SSL inclus,Assistance gratuite pendant les 2 premières semaines,Site responsive(Tablette, Téléphone, ordinateur),Pages, Articles,Utilisation des cookies,Formulaire de Contact",
+        li:"Design sur mesure, hébergement 1 an, domaine offert 1 an, SSL, support 2 semaines, responsive, pages, formulaire de contact",
         duree:"7jours"
     },
     {
@@ -29,19 +24,19 @@ export const data=[
         prix:"$250",
         nom:"Site(E-commerce)",
         disponibilite:"disponible",
-        description:"Pour vendre vos produits/services 24h/24, avec une boutique simple à gérer.",
+        description:"Vendez en ligne avec une boutique responsive, sécurisée et facile à gérer.",
         concerne:"Restaurants, boutiques, etc.",
-        li:"Design attrayant et sur mesure, Hébergement gratuit pendant 1 an, Nom de domaine gratuit pendant 1 an,Certificat SSL inclus,Assistance gratuite pendant les 2 premières semaines,Site responsive(Tablette, Téléphone, ordinateur),Pages, Articles,Utilisation des cookies,Formulaire de Contact,Référencement naturel(SEO),filtre de recherche et gestion de stock",
+        li:"Design sur mesure, hébergement 1 an, domaine offert 1 an, SSL, support 2 semaines, responsive, boutique, SEO, gestion de stock",
         duree:"2 semaines"
     },
     {
-        iconentreprise:"https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Ftse4.mm.bing.net%2Fth%2Fid%2FOIP.Ii7Wexevrvw8nFFqefhoVwHaEn%3Fr%3D0%26pid%3DApi&sp=1784166510Tc37e698cd283a2d55ca2e718b337f856dd7ccdc0b87062588630c553dd3a372c",
+        iconentreprise:"https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fd3pxwdeb4y32a1.cloudfront.net%2Fwp-content%2Fuploads%2F2023%2F07%2Fpwa-vs-native-app.webp&sp=1785200715T9cfcef93484bb945dad2a3a3313a9a89b78514e8a9cde5f7dad64a63bec9445b",
         prix:"$250",
         nom:"PWA",
         disponibilite:"A venir",
-        description:"Une application web accessible partout (même hors-ligne) avec installation sur téléphone, offrant une expérience rapide, sécurisée et digne d’une vraie application mobile + un site web complet pour booster votre visibilité en ligne.",
+        description:"Une application web installable et hors ligne, idéale pour une expérience mobile fluide et professionnelle.",
         concerne:"Pour entreprises qui veulent une présence mobile professionnelle : restaurants, magasins, services de livraison, agences, startups, écoles, etc.",
-        li:"Design attrayant et sur mesure, Hébergement gratuit pendant 1 an, Nom de domaine gratuit pendant 1 an,Certificat SSL inclus,Assistance gratuite pendant les 2 premières semaines,Site responsive(Tablette, Téléphone, ordinateur),Pages, Articles,Utilisation des cookies,Formulaire de Contact,Référencement naturel(SEO),filtre de recherche et gestion de stock,Fonctionne sans connexion (hors-ligne), Installation sur smartphone",
+        li:"Design sur mesure, hébergement 1 an, domaine offert 1 an, SSL, support 2 semaines, responsive, PWA installable, hors ligne, smartphone",
         duree:"2 à 3 semaines"
     },
     {
@@ -49,9 +44,9 @@ export const data=[
         prix:"$270",
         nom:"Logiciel(gestion)",
         disponibilite:"A venir",
-        description:"Un logiciel complet pour gérer efficacement vos clients, produits, commandes, stocks et factures, avec un tableau de bord clair et un suivi en temps réel de votre activité.",
+        description:"Automatisez la gestion des clients, stocks, commandes et factures avec un tableau de bord web intuitif.",
         concerne:"Pour PME, restaurants, boutiques, agences, associations et toutes structures souhaitant automatiser leur gestion quotidienne.",
-        li:"Design attrayant et sur mesure, Hébergement gratuit pendant 1 an, Nom de domaine gratuit pendant 1 an,Certificat SSL inclus;Assistance gratuite pendant les 2 premières semaines,Site responsive(Tablette, Téléphone, ordinateur),Pages, Articles,Utilisation des cookies,Formulaire de Contact,Référencement naturel(SEO),filtre de recherche et gestion de stock,Fonctionne sans connexion (hors-ligne), Installation sur smartphone,Gestion des clients et fournisseurs, Gestion des produits et stocks, Suivi des commandes et factures, Reporting et statistiques en temps réel, Multi-utilisateurs avec permissions, Export PDF/Excel, Notifications pour rappels et alertes, Interface web responsive (ordinateur, tablette, téléphone), Sécurité des données, Support et assistance inclus",
+        li:"Design sur mesure, hébergement 1 an, domaine offert 1 an, SSL, support 2 semaines, responsive, clients, stocks, commandes, factures, reporting, sécurité",
         duree:"3 à 6 semaines"
     }
 ]

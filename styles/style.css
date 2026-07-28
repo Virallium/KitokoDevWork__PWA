@@ -56,9 +56,17 @@ html {
 }
 
 body {
+    background:var(--bg-color);
     overflow-x: hidden;
+    transition: background 5s ease-in;
+    -webkit-transition: background 5s ease-in;
+    -moz-transition: background 5s ease-in;
+    -ms-transition: background 5s ease-in;
+    -o-transition: background 5s ease-in;
 }
-
+body:hover{
+    background:rgba(var(--main-color-rgb), 0.05);
+}
 main {
     width: 100%;
 }
@@ -519,21 +527,8 @@ header{
 }
 
 /* ==========================================================================
-   OFFLINE BANNER & SCROLL ANIMATION WRAPPERS
+     ANIMATION WRAPPERS
    ========================================================================== */
-.offline-banner {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #ef4444;
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    box-shadow: 0 10px 20px rgba(239, 68, 68, 0.3);
-    z-index: 1000;
-    font-weight: 500;
-}
 
 /* Préparation de l'animation d'entrée au scroll */
 .notsee {

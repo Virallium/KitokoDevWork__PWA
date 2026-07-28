@@ -377,7 +377,7 @@ dialog form button[type="submit"]:hover {
     margin-bottom: 2.5rem;
 }
 
-.offres .video {
+/* .offres .video {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -388,8 +388,21 @@ dialog form button[type="submit"]:hover {
     max-width: 100%;
     overflow: hidden;
     border: 1px solid rgba(15, 23, 42, 0.03);
+    -webkit-border-radius: var(--border-radius);
+    -moz-border-radius: var(--border-radius);
+    -ms-border-radius: var(--border-radius);
+    -o-border-radius: var(--border-radius);
+} */
+.videos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    place-items:center;
+    gap:2rem;
 }
-
+.offres .video iframe {
+    width:auto;
+    height: 340px;
+}
 .darkmode .offres .video {
     border-color: rgba(255, 255, 255, 0.05);
 }

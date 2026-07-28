@@ -6,7 +6,6 @@
   'use strict';
 
   const WHATSAPP = 'https://wa.me/243853514069';
-  const path = window.location.pathname;
 
   const pages = {
     index:              { label: 'Accueil',            path: '/' },
@@ -17,6 +16,7 @@
     portfolioEustache:  { label: 'Portfolio – Eustache', path: '/html/portfolioEustache.html' }
   };
   function getCurrentPage() {
+    const path = window.location.pathname;
     for (const [key, page] of Object.entries(pages)) {
       if (path === page.path || path === page.path + '.html' || (key === 'index' && (path === '/' || path === '/index' || path === '/index.html'))) {
         return key;
@@ -57,7 +57,7 @@
               </button>
             </li>
             ${linksHTML}
-            <li><a href="${WHATSAPP}" class="technicSupport" target="_blank" rel="noopener">
+            <li class="links_a"><a href="${WHATSAPP}" class="technicSupport" target="_blank" rel="noopener">
               <span><i class="fa-solid fa-headset"></i></span>
               <p>Support</p>
             </a></li>

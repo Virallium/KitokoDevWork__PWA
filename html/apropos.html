@@ -87,23 +87,14 @@
     <link rel="stylesheet" href="/styles/apropos.css">
     <link rel="manifest" href="/manifest.json">
     <script src="/js/components.js" defer></script>
-    <script src="/js/style.js" defer></script>
-    <script src="/js/serviceworker.js" defer></script>
     <!--fontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="/KitokoDevWork_logo.ico" type="image/x-icon">
 </head>
 <body>
+    <div id="shared-header"></div>
+    <div id="shared-breadcrumbs"></div>
     <main>
-        <div class="preloader" role="status" aria-label="Chargement">
-            <div id="logo-img-box1">
-                <div class="logo-img-box2">
-                    <img src="/photos/LogoAnimateKitokoDevWork.webp" alt="Logo KitokoDevWork" width="200" height="200">
-                </div>
-            </div>
-        </div>
-        <div id="shared-header"></div>
-        <div id="shared-breadcrumbs"></div>
       <section class="surnous">
             <div class="surnous_top scrollAnimation notsee">
                 <h1>Votre agence digitale à Kinshasa – Sites web, applications & logiciels sur mesure</h1>
@@ -115,7 +106,7 @@
                     <!--Icon-->
                     <i class="fa-solid fa-users"></i>
                     <h2>Qui sommes-nous ?</h2>
-                    <p>Kitoko Dev Work est une agence de création de sites web professionnels basée à Kinshasa, en République Démocratique du Congo. Nous nous spécialisons dans la conception de sites web pour les restaurants, les petites et moyennes entreprises (PME) et les organisations locales. Notre mission est d'aider nos clients à établir une présence en ligne solide et à attirer davantage de clients grâce à des sites web attrayants, fonctionnels et optimisés pour les moteurs de recherche.</p>
+                    <p>Kitoko Dev Work est une agence de création de sites web professionnels basée à Kinshasa, en République Démocratique du Congo. Nous nous spécialisons dans la conception de sites web, logiciels de gestion, intégration d'intelligence artificielle pour les restaurants, les petites et moyennes entreprises (PME) et les organisations locales. Notre mission est d'aider nos clients à établir une présence en ligne solide et à attirer davantage de clients grâce à des sites web attrayants, fonctionnels et optimisés pour les moteurs de recherche.</p>
                 </div>
                 <div class="surnous_bottom-box2 scrollAnimation notsee">
                     <!--Icon-->
@@ -176,11 +167,11 @@
                     </div>
                   <p>
                     <span>Mr Miradi Mengi</span>
-                    <span><strong>Developpeur Front-end</strong></span>
+                    <span><strong>Developpeur Fullstack</strong></span>
                   </p>
                 </div>
                 <p>
-                  Je suis  passionné par le digital, les nouvelles technologies, l’entrepreneuriat et le développement web, avec un fort intérêt pour la création de solutions numériques qui apportent une réelle valeur aux entreprises locales. En parallèle de ma vie de developpeur front-end, je suis entrepreneur et fondateur de Kitoko Dev Work, une agence spécialisée dans la conception de sites web et d’applications web modernes, adaptées aux besoins des petites et moyennes entreprises à Kinshasa.
+                  Je suis  passionné par le digital, les nouvelles technologies, l’entrepreneuriat et le développement web, avec un fort intérêt pour la création de solutions numériques qui apportent une réelle valeur aux entreprises locales. En parallèle de ma vie de developpeur Fullstack, je suis entrepreneur et co-fondateur de Kitoko Dev Work, une agence spécialisée dans la conception de sites web et d’applications web modernes, adaptées aux besoins des petites et moyennes entreprises à Kinshasa.
                 </p>
                 <a href="/html/portfolio.html">Cliquez pour en savoir plus...</a>
               </div>
@@ -191,18 +182,18 @@
                   </div>
                   <p>
                     <span>Mr Eustache Muzaliwa</span>
-                    <span><strong>Developpeur Back-end</strong></span>
+                    <span><strong>Developpeur FullStack</strong></span>
                   </p>
                 </div>
                 <p>
-                  Je suis  passionné par la technologie notamment le développement des logiciels et l’IA (intelligence artificielle), je suis également entrepreneur co-fondateur de Kitoko Dev Work une entreprise qui œuvre dans le domaine du numérique, un domaine dans lequel je trouve que notre pays a encore beaucoup de chemin à faire pour se comparer aux standards mondiaux;... 
+                  Je suis  passionné par la technologie notamment le développement des logiciels et l’IA (intelligence artificielle), je suis également entrepreneur co-fondateur de Kitoko Dev Work une agence qui œuvre dans le domaine du numérique, un domaine dans lequel je trouve que notre pays a encore beaucoup de chemin à faire pour se comparer aux standards mondiaux;... 
                 </p>
                 <a href="/html/portfolioEustache.html">Cliquez pour en savoir plus...</a>
               </div>
             </div>
           </section>
-        <div id="shared-footer"></div>
     </main>
+    <div id="shared-footer"></div>
     <script>
       document.getElementById('contactForm').addEventListener('submit', function(e) {
         e.preventDefault();

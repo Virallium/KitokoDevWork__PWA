@@ -46,27 +46,82 @@
     }).join('\n            ');
 
     target.innerHTML = `
-    <div class="rgbafornavphone"></div>
-    <header class="header appear">
-      <div id="logo"><a href="/"><img src="/photos/KitokoDevWork_logo.webp" alt="Logo KitokoDevWork" width="200"></a></div>
-      <nav>
-        <ul>
-            <li class="btnclose-li" aria-hidden="true">
-              <button id="close" class="btnclose" type="button" aria-label="Fermer le menu">
-                <i class="fa-solid fa-xmark"></i>
-              </button>
-            </li>
-            ${linksHTML}
-            <li class="links_a"><a href="${WHATSAPP}" class="technicSupport" target="_blank" rel="noopener">
-              <span><i class="fa-solid fa-headset"></i></span>
-              <p>Support</p>
-            </a></li>
-        </ul>
-        <div class="menu">
-          <i class="fa-solid fa-bars" id="bar"></i>
+    <div class="header appear">
+      <div class="first-header">
+        <div class="infos">
+          <div class="info">
+            <span><i class="fa-solid fa-phone"></i> 0853514069</span>
+          </div>
+          <div class="info">
+            <span><i class="fa-solid fa-envelope"></i> kitokodevwork@gmail.com</span>
+          </div>
+          <div class="info">
+            <span><i class="fa-solid fa-location-dot"></i> RDC, Kinshasa</span>
+          </div>
         </div>
-      </nav>
-    </header>`;
+        <div class="rx" aria-label="Réseaux sociaux">
+          <a href="https://www.facebook.com/kitokodevwork" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="${WHATSAPP}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://www.instagram.com/kitokodevwork?igsh=NHhuMzlidDB5MThl" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@kitokodevwork?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+      <header>
+        <div id="logo"><a href="/"><img src="/photos/KitokoDevWork_logo.webp" alt="Logo KitokoDevWork" width="200"></a></div>
+        <nav aria-label="Navigation principale">
+          <ul>
+              <li class="btnclose-li">
+                <button id="close" class="btnclose" type="button" aria-label="Fermer le menu">
+                  <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+              </li>
+              ${linksHTML}
+              <li class="links_a"><a href="${WHATSAPP}" class="technicSupport" target="_blank" rel="noopener">
+                <span><i class="fa-solid fa-headset"></i></span>
+                <p>Support</p>
+              </a></li>
+          </ul>
+          <button class="menu" id="bar" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-navigation">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+          </button>
+        </nav>
+      </header>
+    </div>`;
+
+    const header = target.querySelector('.header');
+    const menuButton = target.querySelector('#bar');
+    const menuIcon = menuButton?.querySelector('i');
+    const closeButton = target.querySelector('#close');
+    const navigation = target.querySelector('nav ul');
+
+    if (!header || !menuButton || !menuIcon || !closeButton || !navigation) return;
+    navigation.id = 'primary-navigation';
+
+    const setMenuOpen = (isOpen) => {
+      header.classList.toggle('menu-open', isOpen);
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+      menuIcon.classList.toggle('fa-bars', !isOpen);
+      menuIcon.classList.toggle('fa-xmark', isOpen);
+    };
+
+    menuButton.addEventListener('click', () => {
+      setMenuOpen(!header.classList.contains('menu-open'));
+    });
+    closeButton.addEventListener('click', () => setMenuOpen(false));
+    navigation.addEventListener('click', (event) => {
+      if (event.target instanceof Element && event.target.closest('a')) {
+        setMenuOpen(false);
+      }
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setMenuOpen(false);
+    });
+    document.addEventListener('click', (event) => {
+      if (event.target instanceof Node && !header.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    });
   }
 
   /* ─── BREADCRUMBS ─── */
@@ -118,31 +173,52 @@
     target.innerHTML = `
     <footer class="footer">
       <div class="section__container footer__container">
-        <div class="footer__logo scrollAnimation">
-          <img src="/photos/KitokoDevWork_logo.webp" alt="Logo KitokoDevWork" width="200" loading="lazy">
-        </div>
-        <div class="footer__content">
-          <p class="scrollAnimation">
-            Bienvenue chez KitokoDev Work, où créativité et expertise digitale se rencontrent.
-            Notre mission est de concevoir des sites web uniques et performants, en combinant design,
-            innovation et expérience utilisateur pour aider votre entreprise à se démarquer en ligne.
-          </p>
-          <div class="footer_links_box">
-            <ul class="footer__links">
-              <li class="scrollAnimation">
-                <span><i class="fa-solid fa-location-dot"></i></span> RDC, Kinshasa
-              </li>
-              <li class="scrollAnimation">
-                <span><i class="fa-solid fa-envelope"></i></span>
-                <a href="mailto:kitokodevwork@gmail.com">KitokoDevWork@gmail.com</a>
-              </li>
-            </ul>
-            <div class="footer__socials scrollAnimation">
-              <a href="https://www.facebook.com/kitokodevwork" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="${WHATSAPP}" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
-              <a href="https://www.instagram.com/kitokodevwork?igsh=NHhuMzlidDB5MThl" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://www.tiktok.com/@kitokodevwork?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+        <div class='first'>
+          <div class="footer__logo scrollAnimation">
+            <img src="/photos/KitokoDevWork_logo.webp" alt="Logo KitokoDevWork" width="200" loading="lazy">
+          </div>
+          <div class="footer__content">
+            <p class="scrollAnimation">
+              Bienvenue chez KitokoDev Work, où créativité et expertise digitale se rencontrent.
+              Notre mission est de concevoir des sites web uniques et performants, en combinant design,
+              innovation et expérience utilisateur pour aider votre entreprise à se démarquer en ligne.
+            </p>
+            <div class="footer_links_box">
+              <ul class="footer__links">
+                <li class="scrollAnimation">
+                  <span><i class="fa-solid fa-location-dot"></i></span> RDC, Kinshasa
+                </li>
+                <li class="scrollAnimation">
+                  <span><i class="fa-solid fa-envelope"></i></span>
+                  <a href="mailto:kitokodevwork@gmail.com">KitokoDevWork@gmail.com</a>
+                </li>
+
+              </ul>
+              <div class="footer__socials scrollAnimation">
+                <a href="https://www.facebook.com/kitokodevwork" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="${WHATSAPP}" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/kitokodevwork?igsh=NHhuMzlidDB5MThl" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@kitokodevwork?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener"><i class="fa-brands fa-tiktok"></i></a>
+              </div>
             </div>
+          </div>
+        </div>
+        <div class='rapid_links'>
+          <h3>Liens rapides</h3>
+          <links>
+            <a href='/'>Accueil</a>
+            <a href='../html/apropos.html'>Apropos</a>
+            <a href='../html/catalogue.html'>Catalogue</a>
+            <a href='../html/services.html'>Services</a>
+          </links>
+        </div>
+        <div class='politiques'>
+          <h3>Politiques</h3>
+          <div class='text'>
+            <a href=''>Mentions légales</a>
+            <a href=''>Politiques de confidentialité</a>
+            <a href=''>Conditions générales</a>
+            <a href=''>Politiques de protection des données</a>
           </div>
         </div>
       </div>
@@ -163,19 +239,28 @@
     update();
   }
 
+  function initCatalogueDialog() {
+    const dialog = document.getElementById('dialog');
+    const closeButton = document.getElementById('closecmdBtn');
+    if (!(dialog instanceof HTMLDialogElement) || !closeButton) return;
+
+    document.querySelectorAll('a[href="#dialog"]').forEach((trigger) => {
+      trigger.addEventListener('click', (event) => {
+        event.preventDefault();
+        dialog.showModal();
+      });
+    });
+
+    closeButton.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+  }
+
   /* ─── INIT ─── */
   renderHeader();
   renderBreadcrumbs();
   renderFooter();
   initOfflineBanner();
-
-  // Re-observe scroll animations on dynamically injected elements
-  window.__reobserveScroll = function () {
-    if (window.__scrollObserver) {
-      document.querySelectorAll('.scrollAnimation').forEach(function (el) {
-        window.__scrollObserver.observe(el);
-      });
-    }
-  };
-  // Will be called from style.js after observer is set up
+  initCatalogueDialog();
 })();

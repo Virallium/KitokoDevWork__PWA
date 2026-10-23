@@ -1,0 +1,19 @@
+{
+  "name": "kitokodevwork__pwa",
+  "version": "1.0.0",
+  "description": "\"# KitokoDevWork__PWA\"",
+  "homepage": "https://github.com/Virallium/KitokoDevWork__PWA#readme",
+  "bugs": {
+    "url": "https://github.com/Virallium/KitokoDevWork__PWA/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Virallium/KitokoDevWork__PWA.git"
+  },
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"vite build"
+  }
+}

@@ -30,7 +30,7 @@ export const data=[
         duree:"2 semaines"
     },
     {
-        iconentreprise:"https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fd3pxwdeb4y32a1.cloudfront.net%2Fwp-content%2Fuploads%2F2023%2F07%2Fpwa-vs-native-app.webp&sp=1785200715T9cfcef93484bb945dad2a3a3313a9a89b78514e8a9cde5f7dad64a63bec9445b",
+        iconentreprise:"/photos/pwa-main-image-latest.png",
         prix:"$250",
         nom:"PWA",
         disponibilite:"A venir",
@@ -48,6 +48,17 @@ export const data=[
         concerne:"Pour PME, restaurants, boutiques, agences, associations et toutes structures souhaitant automatiser leur gestion quotidienne.",
         li:"Design sur mesure, hébergement 1 an, domaine offert 1 an, SSL, support 2 semaines, responsive, clients, stocks, commandes, factures, reporting, sécurité",
         duree:"3 à 6 semaines"
+    },
+    {
+        iconentreprise:"/photos/vignette_IA_0.jpg",
+        prix:"$350",
+        nom:"Intégration IA",
+        disponibilite:"A venir",
+        description:"Intégrez l'intelligence artificielle pour automatiser les tâches, améliorer l'expérience utilisateur et optimiser les performances de votre site ou application.",
+        concerne:"Pour entreprises, startups, développeurs et toute structure souhaitant exploiter l'IA pour améliorer ses services et produits.",
+        li:"Design sur mesure, hébergement 1 an, domaine offert 1 an, SSL, support 2 semaines, responsive, intégration d'IA pour automatisation, personnalisation et optimisation",
+        duree:"3 à 4 semaines"
+
     }
 ]
 
@@ -89,4 +100,10 @@ export const projets=[
         type_site:'Site de presentation Agora Wanga',
         lien:'https://agora-wanga.onrender.com/Apropos/'
     },
+    {
+        photo: './photos/elixir.png',
+        alt:'Maquette application web pour l\'entreprise Elixir data',
+        type_site:'Site d\'information',
+        lien: 'https://elixir-group-1.onrender.com/'
+    }
 ]

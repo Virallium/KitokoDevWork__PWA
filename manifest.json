@@ -10,16 +10,45 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/photos/KitokoDevWork_logo.webp",
+      "src": "LogoAnimateKitokoDevWork.webp/manifest-icon-192.maskable.png",
       "sizes": "192x192",
-      "type": "image/webp",
+      "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "photos/KitokoDevWork_logo.webp",
+      "src": "LogoAnimateKitokoDevWork.webp/manifest-icon-192.maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "LogoAnimateKitokoDevWork.webp/manifest-icon-512.maskable.png",
       "sizes": "512x512",
-      "type": "image/webp",
+      "type": "image/png",
       "purpose": "any"
+    },
+    {
+      "src": "LogoAnimateKitokoDevWork.webp/manifest-icon-512.maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ],
+  "screenshots": [
+    {
+      "src": "/photos/KitokoDevWork_logo.webp",
+      "sizes": "640x480",
+      "type": "image/webp"
+    },
+    {
+      "src": "/photos/KitokoDevWork_logo.webp",
+      "sizes": "1280x720",
+      "type": "image/webp"
     }
   ]
 }

@@ -105,5 +105,11 @@ export const projets=[
         alt:'Maquette application web pour l\'entreprise Elixir data',
         type_site:'Site d\'information',
         lien: 'https://elixir-group-1.onrender.com/'
+    },
+    {
+        photo:'https://www.greenpropertyrdc.com/',
+        alt:'Application de location des maisons',
+        type_site:'Application de gestion',
+        lien:'https://www.greenpropertyrdc.com/'
     }
 ]

@@ -64,35 +64,10 @@ export const data=[
 
 export const projets=[
     {
-        photo:'./photos/img_1.svg',
-        alt:'Maquette site Cyber Café Le Papillon',
-        type_site:'Site informatif Cyber café',
-        lien:'https://le-papillon-d6bcf.web.app',
-
-    },
-    {
-        photo:'./photos/img_3.svg',
-        alt:'Maquette site E-commerce vente des chaussures',
-        type_site:'Site E-commerce vente des chaussures',
-        lien:'https://kdevwork-maquette03.web.app/index.html'
-    },
-    {
         photo:'./photos/img_4.png',
         alt:"Site internet pour la gestion d'un departement le Céncale",
         type_site:'Site éclésiastique',
         lien:'https://appli-gestion-departement-1.onrender.com'
-    },
-    {
-        photo:'./photos/img_5.png',
-        alt:'Maquette Application web de gestion des ouvriers',
-        type_site:'Application web de gestion',
-        lien:''
-    },
-    {
-        photo:'./photos/img_6.png',
-        alt:'Maquette site de la jeunesse',
-        type_site:'Site de la jeunesse',
-        lien:'https://application-web-jeunesse-cbco.onrender.com'
     },
     {
         photo:'./photos/img_7.png',
@@ -108,8 +83,14 @@ export const projets=[
     },
     {
         photo:'https://www.greenpropertyrdc.com/',
-        alt:'Application de location des maisons',
-        type_site:'Application de gestion',
+        alt:'Application de location des maisons GreenProperty',
+        type_site:'Application de gestion GreenProperty',
         lien:'https://www.greenpropertyrdc.com/'
-    }
+    },
+    {
+        photo:'',
+        alt:'Site informatif de vision jeunes',
+        type_site:'Site vitrine Vision jeune',
+        lien:'https://vision-jeunes.railway.app'
+    },
 ]

@@ -231,8 +231,6 @@ p {
     left: 0;
     z-index:1000;
     width: 100%;
-    height: 30px;
-    overflow: hidden;
     color: var(--text-primary);
     background: var(--bg2-color);
     box-shadow: 0 8px 30px rgba(17, 46, 66, 0.07);
@@ -392,7 +390,7 @@ p {
     background: var(--secondary-color);
 }
 
-.heroSwiper .swiper-slide {
+.heroSwiper swiper-slide {
     position: relative;
     display: flex;
     align-items: center;
@@ -401,7 +399,7 @@ p {
     isolation: isolate;
 }
 
-.heroSwiper .swiper-slide::after {
+.heroSwiper swiper-slide::after {
     position: absolute;
     z-index: 1;
     inset: 0;
@@ -409,7 +407,7 @@ p {
     content: "";
 }
 
-.heroSwiper .swiper-slide > img {
+.heroSwiper swiper-slide > img {
     position: absolute;
     z-index: 0;
     inset: 0;

@@ -148,8 +148,8 @@
     <link rel="apple-touch-startup-image" href="/assets/apple-splash-1334-750-D2zH0prL.jpg" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
     <link rel="apple-touch-startup-image" href="/assets/apple-splash-640-1136-DF0iz2Is.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
     <link rel="apple-touch-startup-image" href="/assets/apple-splash-1136-640-C1AbleHE.jpg" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)">
-    <script type="module" crossorigin src="/assets/index-CkDLzjwR.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DwUbaKAi.css">
+    <script type="module" crossorigin src="/assets/index-DGhMnr1u.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CllUtbZ9.css">
   <script id="vite-plugin-pwa:register-sw" src="/registerSW.js"></script></head>
   <body>
     <div class="preloader" role="status" aria-label="Chargement">
@@ -162,8 +162,9 @@
     <div id="shared-header"></div>
     <main>
       <section class="presentationBox ">
-        <swiper-container class="heroSwiper" pagination="true" pagination-clickable="true" space-between="30" effect="fade" navigation="true" autoplay="true" autoplay-delay="5000" autoplay-disable-on-interaction="false" loop="true">
-          <swiper-slide>
+        <div class="heroSwiper swiper">
+          <div class="swiper-wrapper">
+          <div class="swiper-slide">
             <img src="/assets/KitokoDevWork_photo_web1-zdu-UlJP.webp" alt="Présentation d'un site web professionnel" decoding="async" fetchpriority="high">
             <div class="text">
               <p>Développez votre présence numérique </p>
@@ -178,8 +179,8 @@
                 <a href="/services.html" class="btn btn-secondary">Nos Services</a>
               </div>
             </div>
-          </swiper-slide>
-          <swiper-slide>
+          </div>
+          <div class="swiper-slide">
             <img src="/assets/KitokoDevWork_photo_web5-Df-AT7J5.webp" alt="Exemple de présence numérique pour une entreprise" decoding="async">
             <div class="text">
               <p>Le sais-tu ? </p>
@@ -190,8 +191,8 @@
                 <p>Un site web professionnel permet notamment de centraliser les informations essentielles d'une entreprise, de présenter ses produits et services, de faciliter la prise de contact et de renforcer sa présence dans les résultats des moteurs de recherche. </p>
               </blockquote>
             </div>
-          </swiper-slide>
-          <swiper-slide>
+          </div>
+          <div class="swiper-slide">
             <img src="/assets/KitokoDevWork_photo_web10-optimized-WUNWJ25J.webp" alt="Solutions numériques de KitokoDevWork" decoding="async">
             <div class="text">
               <p>Nous sommes là pour vous aider </p>
@@ -202,8 +203,12 @@
                 <p>Nous aidons les entrepreneurs, commerçants, artistes et prestataires de services à développer leur présence en ligne et à atteindre leurs objectifs commerciaux grâce à des solutions numériques sur mesure.</p>
               </blockquote>
             </div>
-          </swiper-slide>
-        </swiper-container>
+          </div>
+          </div>
+          <div class="swiper-button-prev" aria-label="Diapositive précédente"></div>
+          <div class="swiper-button-next" aria-label="Diapositive suivante"></div>
+          <div class="swiper-pagination"></div>
+        </div>
         <div class="imgs-presentation scrollAnimation">
           <div class="left">
             <img src="/assets/miradi-optimized-ZxgmmPtt.webp" alt="Miradi, SEO, développement web et marketing digital" grid-area="square" loading="lazy" decoding="async">
@@ -630,7 +635,27 @@
     <div id="shared-footer"></div>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
-        var swiper = new Swiper(".testimonialsSwiper", {
+        new Swiper(".heroSwiper", {
+          effect: "fade",
+          fadeEffect: {
+            crossFade: true,
+          },
+          loop: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          navigation: {
+            nextEl: ".heroSwiper .swiper-button-next",
+            prevEl: ".heroSwiper .swiper-button-prev",
+          },
+          pagination: {
+            el: ".heroSwiper .swiper-pagination",
+            clickable: true,
+          },
+        });
+
+        new Swiper(".testimonialsSwiper", {
           spaceBetween: 30,
           centeredSlides: true,
           loop: true,

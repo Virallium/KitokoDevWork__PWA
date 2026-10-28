@@ -32,7 +32,10 @@ const AfficherService = (services) => {
     eachservice.innerHTML = generateHTML(service);
     productContainer.appendChild(eachservice);
   });
-};
+  if (document.body.classList.contains("aos-enabled")) {
+    window.AOS.refreshHard();
+  }
+}
 
 // Affiche tous les produits au chargement*/
 if (document.querySelector('.container')) {
@@ -61,6 +64,9 @@ if (input && productContainer) {
         eachproject.innerHTML = generateProjects(project)
         projectContainer.appendChild(eachproject)
     })
+    if (document.body.classList.contains("aos-enabled")) {
+      window.AOS.refreshHard();
+    }
  }
 if (document.querySelector('.projectContainer')) {
   AfficherProjets(projets)

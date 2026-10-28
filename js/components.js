@@ -171,7 +171,7 @@
     if (!target) return;
 
     target.innerHTML = `
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up">
       <div class="section__container footer__container">
         <div class='first'>
           <div class="footer__logo scrollAnimation">
@@ -257,10 +257,23 @@
     });
   }
 
+  function initScrollAnimations() {
+    if (!window.AOS || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    document.body.classList.add('aos-enabled');
+    window.AOS.init({
+      once: true,
+      duration: 700,
+      easing: 'ease-out-cubic',
+      offset: 70
+    });
+  }
+
   /* ─── INIT ─── */
   renderHeader();
   renderBreadcrumbs();
   renderFooter();
   initOfflineBanner();
   initCatalogueDialog();
+  initScrollAnimations();
 })();

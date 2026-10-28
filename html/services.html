@@ -67,14 +67,15 @@
       }
     </script>
     <!--GOOGLE FONT-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Services | Sites Web, Applications PWA & Logiciels de Gestion Kinshasa – KitokoDevWork</title>
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/services.css">
-    <link rel="stylesheet" href="/styles/media.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="manifest" href="/manifest.json">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="/js/components.js" defer></script>
     <script src="/js/index.js" type="module"></script>
     <!--fontAwesome -->
@@ -92,11 +93,11 @@
     <div id="shared-header"></div>
     <div id="shared-breadcrumbs"></div>
     <main>
-        <section class="input" role="search" aria-label="Recherche de services">
+        <section class="input" role="search" aria-label="Recherche de services" data-aos="fade-down">
             <input type="text" placeholder="Recherche" aria-label="Rechercher un service">
         </section>
         <section class="services">
-            <h1 class="h1services">Nos services</h1>
+            <h1 class="h1services" data-aos="fade-up">Nos services</h1>
             <div class="boxcards">
                 <div class="container"></div>
             </div>   

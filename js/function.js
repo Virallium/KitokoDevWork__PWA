@@ -1,6 +1,6 @@
 export function generateHTML(services){
     return`
-        <div class="contentsHTML scrollAnimation">
+        <div class="contentsHTML scrollAnimation" data-aos="fade-up">
             <div class="iconentreprise">
                <img src="${services.iconentreprise}" alt="images"/> 
             </div>
@@ -21,7 +21,7 @@ export function generateHTML(services){
 
 export function generateProjects(projects){
     return `
-        <div class="pj scrollAnimation">
+        <div class="pj scrollAnimation" data-aos="zoom-in">
             <img src="${projects.photo}" alt="${projects.alt}" width="250px">
             <h2>${projects.type_site}</h2>
             <div class="pjbox">

@@ -226,14 +226,19 @@ p {
 }
 
 .header {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     z-index:1000;
     width: 100%;
+    height: 150px;
     color: var(--text-primary);
     background: var(--bg2-color);
     box-shadow: 0 8px 30px rgba(17, 46, 66, 0.07);
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-direction: column;
 }
 
 .first-header {
@@ -244,6 +249,7 @@ p {
     padding: 0.5rem max(var(--page-gutter), calc((100% - var(--content-width)) / 2));
     color: rgba(255, 255, 255, 0.86);
     background: var(--secondary-color);
+    width: 100%;
 }
 
 .first-header .infos,
@@ -339,6 +345,7 @@ p {
     padding-inline: 1rem;
     color: #fff;
     background: var(--main-color);
+
 }
 
 .header nav li > a.technicSupport:hover {
@@ -441,13 +448,17 @@ p {
     color: #71d5ff;
 }
 
-.heroSwiper .text h1,
-.heroSwiper .text h2 {
-    max-width: 18ch;
+.heroSwiper .text h1 {
     margin-bottom: 1rem;
     color: #fff;
-    font-size: clamp(2.2rem, 5.4vw, 4.35rem);
-    letter-spacing: -0.045em;
+    font-size: clamp(1.2rem, 5.4vw, 4.35rem);
+    letter-spacing: .4rem;
+}
+.heroSwiper .text h2{
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: clamp(1.2rem, 2.4vw, 3.35rem);
+    letter-spacing: .4rem;
 }
 
 .heroSwiper .text blockquote {
@@ -475,6 +486,10 @@ p {
     color: var(--secondary-color);
     background: #fff;
 }
+    .imgs-presentation .left img {
+        height: 100%;
+
+    }
 
 .imgs-presentation {
     display: grid;
@@ -490,13 +505,24 @@ p {
     gap: 0.8rem;
 }
 
-.imgs-presentation .left img {
+.imgs-presentation .left .img {
     display: block;
     width: 100%;
     height: clamp(150px, 22vw, 245px);
     border-radius: var(--radius-md);
     background: var(--surface-muted);
+    overflow: hidden;
+    cursor: pointer;
+}
+.imgs-presentation .left .img img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    object-position: top;
+}
+.imgs-presentation .left .img img:hover{
+    transform: scale(1.1);
+    transition: .7s ease;
 }
 
 .imgs-presentation .left img:nth-child(even) {
@@ -933,7 +959,13 @@ p {
     background: #fff;
     box-shadow: var(--shadow-sm);
 }
-
+.swiper-slide .text p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: transparent;
+  -webkit-text-stroke: 0.8px #00abf0; /* Réduit drastiquement l'épaisseur */
+  letter-spacing: 3px; /* Espacement plus naturel */
+}
 .testimonialsSwiper .name {
     margin-bottom: 0.7rem;
     color: var(--secondary-color);
@@ -959,6 +991,7 @@ p {
 
 .catalogue {
     padding-block: clamp(1.5rem, 4vw, 3rem) var(--section-space);
+    margin-top: 6rem;
 }
 
 .principalebox {
@@ -1278,6 +1311,7 @@ p {
 
 .surnous {
     padding-block: clamp(1.5rem, 4vw, 3rem) var(--section-space);
+    margin-top: 6rem;
 }
 
 .surnous_top {
@@ -1870,15 +1904,7 @@ iframe {
         background: linear-gradient(90deg, rgba(9, 25, 38, 0.88), rgba(9, 25, 38, 0.58));
     }
 
-    .imgs-presentation {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .imgs-presentation .left img {
-        height: clamp(150px, 35vw, 240px);
-    }
-
+   
     .schema {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -2043,4 +2069,14 @@ iframe {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+
+    body.aos-enabled [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
+body:not(.aos-enabled) [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
 }

@@ -65,9 +65,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Portfolio Miradi Mengi | Développeur Web & Web Designer Kinshasa – KitokoDevWork</title>
     <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/portfolio.css">
-    <link rel="stylesheet" href="/styles/media.css">
     <link rel="manifest" href="/manifest.json">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="/js/components.js" defer></script>
     <!--fontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -77,7 +76,7 @@
     <div id="shared-header"></div>
     <div id="shared-breadcrumbs" style="margin-top:6rem;"></div>
     <main>
-            <section class="portfolio_pres">
+            <section class="portfolio_pres" data-aos="fade-up">
                 <div class="text_pres_portf" data-aos="fade-right">
                     <p class="portfolio-intro">Bonjour, je m'appelle <span>Miradi</span> et je suis</p>
                     <h1>Developpeur <span>Fullstack</span></h1>
@@ -97,7 +96,7 @@
                 </div>
                 
             </section>
-            <section class="about">
+            <section class="about" data-aos="fade-up">
                 <div class="left">
                     <div class="round" data-aos="zoom-in">
                         <img src="../photos/webdesign.png" alt="Icône Web Design" width="70%">
@@ -135,14 +134,5 @@
                 </div>
             </section>
     </main>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            AOS.init({
-            once: true, // ÉLÉMENT CRITIQUE : Anime une seule fois et arrête d'écouter le scroll sur cet élément
-            duration: 800
-            });
-        });
-    </script>
 </body>
 </html>

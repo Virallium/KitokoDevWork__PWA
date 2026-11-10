@@ -103,6 +103,10 @@ summary:focus-visible {
     outline-offset: 3px;
 }
 
+h1,h2{
+    font-size: clamp(1.5rem, 2.7vw, 2rem);
+}
+
 h1,
 h2,
 h3,
@@ -319,6 +323,9 @@ p {
     padding: 0;
     list-style: none;
 }
+.header nav ul li button i{
+    background: transparent;
+}
 
 .header nav li > a {
     display: inline-flex;
@@ -335,7 +342,7 @@ p {
 }
 
 .header nav li > a:hover,
-.header nav li > a.Active {
+.header nav li > .Active {
     color: var(--main-hover);
     background: var(--surface-muted);
 }
@@ -457,7 +464,7 @@ p {
 .heroSwiper .text h2{
     margin-bottom: 1rem;
     color: #fff;
-    font-size: clamp(1.2rem, 2.4vw, 3.35rem);
+    
     letter-spacing: .4rem;
 }
 
@@ -533,7 +540,7 @@ p {
 .presentationBox .services > h2,
 .work_process h2 {
     margin-bottom: 0.9rem;
-    font-size: clamp(1.8rem, 3.3vw, 2.7rem);
+    
     letter-spacing: -0.035em;
 }
 
@@ -653,7 +660,6 @@ p {
 .presentationBox > .boxs .box h2 {
     margin-top: 0.6rem;
     color: var(--main-hover);
-    font-size: 2.25rem;
 }
 
 .presentationBox > .boxs .title {
@@ -682,23 +688,28 @@ p {
     color: var(--main-hover);
 }
 
-.schema {
+.work_process .schema {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1rem;
 }
 
-.schema .div {
-    padding: 1.3rem;
+.work_process .schema .div {
+    padding: 1rem;
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     background: #fff;
     cursor:pointer;
+    box-shadow: none;
+    transform: translateX(0px);
 }
-.schema .div:hover{
-   padding: min(1rem);
-   transform: translateY(3px);
+.work_process .schema .div:hover{
+   transform: translateY(-8px);
+   box-shadow: 3px 5px 3px rgba(10, 24, 36, 0.045);
    transition: .6s ease; 
+}
+.work_process .schema .div:hover h3{
+    color: var(--main-hover);
 }
 .schema .line {
     display: none;
@@ -709,7 +720,6 @@ p {
 .faq > h2,
 .sectionEquipe > h2 {
     margin-bottom: 1.8rem;
-    font-size: clamp(1.8rem, 3.4vw, 2.7rem);
     text-align: center;
 }
 
@@ -742,7 +752,6 @@ p {
 .presentation.see h2 {
     margin-bottom: 0.9rem;
     color: #fff;
-    font-size: 1.15rem;
 }
 
 .presentation.see iframe {
@@ -806,10 +815,7 @@ p {
     object-fit: contain;
 }
 
-.iconPartenariat h2,
-.company-status h2 {
-    font-size: 1.2rem;
-}
+
 
 .partenariat > p,
 .company-status p,
@@ -881,7 +887,6 @@ p {
 .projectContainer .pj h2 {
     padding: 0.9rem 1rem 0;
     color: #fff;
-    font-size: 1.1rem;
 }
 
 .projectContainer .pjbox {
@@ -942,7 +947,6 @@ p {
 
 .testimonies > h2 {
     margin-bottom: 0.4rem;
-    font-size: clamp(1.8rem, 3.4vw, 2.7rem);
 }
 
 .testimonialsSwiper {
@@ -1045,7 +1049,6 @@ p {
 .h2catg,
 .offres > h2 {
     margin-block: 3rem 1.4rem;
-    font-size: clamp(1.7rem, 3vw, 2.4rem);
     text-align: center;
 }
 
@@ -1090,9 +1093,6 @@ p {
     padding: 1.3rem;
 }
 
-.catalogue .boxtext h2 {
-    font-size: 1.25rem;
-}
 
 .catalogue .boxtext p,
 .catalogue .boxtext .duree {
@@ -1358,7 +1358,6 @@ p {
 
 .surnous_bottom > div > h2 {
     margin-bottom: 0.6rem;
-    font-size: 1.15rem;
 }
 
 .surnous_bottom > div > p {
@@ -1402,7 +1401,6 @@ p {
 
 .surnous_bottom-box6 .left h2 {
     margin-bottom: 0.7rem;
-    font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 .surnous_bottom-box6 .left p {
@@ -1594,7 +1592,6 @@ p {
 
 .AboutMe h2 {
     margin-bottom: 0.9rem;
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
 }
 
 .AboutMe p {
@@ -1880,17 +1877,7 @@ iframe {
         border-bottom: 1px solid var(--border-color);
     }
 
-    .header .btnclose {
-        display: grid;
-        width: 38px;
-        height: 38px;
-        place-items: center;
-        border: 0;
-        border-radius: 10px;
-        color: var(--secondary-color);
-        background: var(--surface-muted);
-        cursor: pointer;
-    }
+    
 
     .heroSwiper,
     .heroSwiper .swiper-slide {
@@ -1951,10 +1938,7 @@ iframe {
         min-height: 560px;
     }
 
-    .heroSwiper .text h1,
-    .heroSwiper .text h2 {
-        font-size: clamp(2rem, 10vw, 3rem);
-    }
+ 
 
     .heroSwiper .btns {
         align-items: stretch;

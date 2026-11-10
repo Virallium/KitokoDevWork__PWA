@@ -71,8 +71,8 @@
         <nav aria-label="Navigation principale">
           <ul>
               <li class="btnclose-li">
-                <button id="close" class="btnclose" type="button" aria-label="Fermer le menu">
-                  <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                <button id="close"  type="button" aria-label="Fermer le menu">
+                  
                 </button>
               </li>
               ${linksHTML}

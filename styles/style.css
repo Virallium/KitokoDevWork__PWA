@@ -962,8 +962,7 @@ p {
 .swiper-slide .text p {
   font-size: 1.1rem;
   font-weight: 500;
-  color: transparent;
-  -webkit-text-stroke: 0.8px #00abf0; /* Réduit drastiquement l'épaisseur */
+  color: var(--main-color); /* Réduit drastiquement l'épaisseur */
   letter-spacing: 3px; /* Espacement plus naturel */
 }
 .testimonialsSwiper .name {

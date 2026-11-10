@@ -1017,7 +1017,7 @@ p {
 .principalebox h1 {
     margin-bottom: 0.8rem;
     color: #fff;
-    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-size: clamp(1.8rem, 2.5vw, 3rem);
     letter-spacing: -0.04em;
 }
 

@@ -10,25 +10,25 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "manifest-icon-192.maskable.png",
+      "src": "public/manifest-icon-192.maskable.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "manifest-icon-192.maskable.png",
+      "src": "public/manifest-icon-192.maskable.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "manifest-icon-512.maskable.png",
+      "src": "public/manifest-icon-512.maskable.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "manifest-icon-512.maskable.png",
+      "src": "public/manifest-icon-512.maskable.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
@@ -41,16 +41,58 @@
   ],
   "screenshots": [
     {
-      "src": "/photos/LogoAnimateKitokoDevWork.webp",
-      "sizes": "640x480",
-      "type": "image/webp",
+      "src": "/photos/first-img.jpg",
+      "sizes": "720x1562",
+      "type": "image/jpeg",
       "form_factor": "narrow",
       "label": "Aperçu mobile de Kitoko Dev Work"
     },
     {
-      "src": "/photos/LogoAnimateKitokoDevWork.webp",
-      "sizes": "1280x720",
-      "type": "image/webp",
+      "src": "/photos/second_img.jpg",
+      "sizes": "720x1562",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Aperçu bureau de Kitoko Dev Work"
+    },
+    {
+      "src": "/photos/third_img.jpg",
+      "sizes": "720x1562",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Aperçu bureau de Kitoko Dev Work"
+    },
+    {
+      "src": "/photos/forth_img.jpg",
+      "sizes": "720x1562",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Aperçu bureau de Kitoko Dev Work"
+    },
+    {
+      "src": "/photos/fifth_img.jpg",
+      "sizes": "720x1562",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Aperçu bureau de Kitoko Dev Work"
+    },
+    {
+      "src": "/photos/sixth_img.jpg",
+      "sizes": "720x1562",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Aperçu bureau de Kitoko Dev Work"
+    },
+    {
+      "src": "/photos/seventh_img.jpg",
+      "sizes": "720x1562",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Aperçu bureau de Kitoko Dev Work"
+    },
+    {
+      "src": "/photos/eighth_img.jpg",
+      "sizes": "720x1562",
+      "type": "image/jpeg",
       "form_factor": "wide",
       "label": "Aperçu bureau de Kitoko Dev Work"
     }

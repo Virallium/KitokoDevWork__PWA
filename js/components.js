@@ -15,10 +15,16 @@
     portfolio:          { label: 'Portfolio – Miradi', path: '/html/portfolio.html' },
     portfolioEustache:  { label: 'Portfolio – Eustache', path: '/html/portfolioEustache.html' }
   };
+  function normalizePath(path) {
+    return path.replace(/\.html$/i, '').replace(/\/+$/, '') || '/';
+  }
+
   function getCurrentPage() {
-    const path = window.location.pathname;
+    const path = normalizePath(window.location.pathname);
+    if (path === '/index') return 'index';
+
     for (const [key, page] of Object.entries(pages)) {
-      if (path === page.path || path === page.path + '.html' || (key === 'index' && (path === '/' || path === '/index' || path === '/index.html'))) {
+      if (path === normalizePath(page.path)) {
         return key;
       }
     }
